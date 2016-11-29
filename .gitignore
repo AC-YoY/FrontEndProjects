@@ -45,4 +45,4 @@ $RECYCLE.BIN/
 Network Trash Folder
 Temporary Items
 .apdisk
-DailyTask\node_modules
+/DailyTask/node_modules
