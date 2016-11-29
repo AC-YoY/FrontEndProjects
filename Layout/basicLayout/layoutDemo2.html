@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+<head>
+    <!-- 4 columns all dynamic -->
+    <meta charset="utf-8"  />
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            border: 3px solid black;
+            height: 500px;
+            font-weight: bold;
+            font-size: 20px;
+            text-align: center;
+        }
+        .aside-left {
+            flex: 1 1 40%;
+            border: 2px dashed green;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        .aside-l-up {
+            flex: 1 1 70%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+        .aside-l-l {
+            background-color: lightblue;
+            border: 2px dashed green;
+            flex: 1 1 50%;
+        }
+        .aside-l-r {
+            background-color: darkblue;
+            border: 2px dashed green;
+            flex: 1 1 50%;
+        }
+        .aside-l-bottom {
+            flex: 1 1 30%;
+            background-color: orange;
+        }
+        article {
+            flex: 1 1 40%;
+        }
+        .aside-right {
+            flex: 1 1 20%;
+            display: flex;
+            flex-flow: column nowrap;
+        }
+        .aside-r-up {
+            background-color: orange;
+            flex: 1 1 70%;
+        }
+        .aside-r-bottom {
+            background-color: lightblue;
+            flex: 1 1 30%;
+        }
+    </style>
+</head>
+<body>
+    <aside class="aside-left">
+        <div class="aside-l-up">
+            <div class="aside-l-l">
+                A
+            </div>
+            <div class="aside-l-r">
+                B
+            </div>
+        </div>
+        <div class="aside-l-bottom">
+            dynamic aside left
+        </div>
+    </aside>
+    <article>
+        dynamic content
+    </article>
+    <aside class="aside-right">
+        <div class="aside-r-up">
+            dynamic aside right
+        </div>
+        <div class="aside-r-bottom">
+
+        </div>
+    </aside>
+</body>
+</html>

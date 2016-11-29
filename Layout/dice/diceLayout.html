@@ -1,0 +1,264 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8"  />
+    <title>骰子演示Flex布局</title>
+    <style>
+        .container {
+             background-color: #2b2b2b;
+             width: 600px;
+             height: 600px;
+             border: 1px solid black;
+             border-radius: 15px;
+             /* 下面是重点 */
+             display: flex;
+             flex-flow: row wrap;
+             justify-content: center;
+             align-items: center;
+             align-content: stretch;
+        }
+        .dice-Outer {
+            background-color: white;
+            border: 1px solid white;
+            width: 130px;
+            height: 130px;
+            border-radius: 15px;
+            /* 这一操作使得一行只放得下三个元素 */
+            margin: 20px 20px;
+        }
+        .dice-Outer > div {
+            margin: 5px 5px 5px 5px;
+            background-color: #e7e7e7;
+            width: 120px;
+            height: 120px;
+            border-radius: 15px;
+
+            -moz-box-sizing: content-box;
+            box-sizing: content-box;
+            border: none;
+            -webkit-border-radius: 10px;
+            border-radius: 10px;
+            font: normal 16px/1 "Times New Roman", Times, serif;
+            color: rgba(255,255,255,1);
+            text-align: center;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            -webkit-box-shadow: 0 8px 2px 8px rgba(33,32,32,0.5) ;
+            box-shadow: 0 8px 2px 8px rgba(33,32,32,0.5) ;
+        }
+        .item {
+            background-color: black;
+            height: 25px;
+            width: 25px;
+            display: inline-block;
+            border-radius: 50%;
+            /*margin: 10px;*/
+        }
+        .dice-1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .dice-2 {
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+        }
+        .dice-3 {
+            width: 100px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .dice-mid-3 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item:nth-child(2) {
+            align-self: center;
+        }
+        .item:nth-child(3) {
+            align-self: flex-end;
+        }
+        .dice-mid-4 {
+            display: flex;
+            flex-wrap: wrap;
+            /*四个骰子重点在这儿*/
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .dice-4 {
+            flex-basis: 80%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .dice-mid-5 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .dice-6 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .dice-7 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .dice-7-edge {
+            flex-basis: 50%;
+            display: flex;
+            justify-content: space-between;
+        }
+        .dice-8 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .dice-8-edge {
+            display: flex;
+            flex-basis: 80%;
+            justify-content: space-around;
+        }
+        .dice-9 {
+            display: flex;
+            flex-wrap: wrap;
+            align-content: space-around;
+            justify-content: space-around;
+        }
+        .dice-9-line {
+            flex-basis: 80%;
+            display:flex;
+            justify-content: space-between;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dice-Outer">
+            <div class="dice-1">
+                <span class="item"></span>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-2">
+                <span class="item"></span>
+                <span class="item"></span>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-mid-3">
+                <div class="dice-3">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-mid-4">
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-mid-5">
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div >
+                    <span class="item"></span>
+                </div>
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-6">
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-7">
+                <div class="dice-7-edge">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-4">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-7-edge">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-8">
+                <div class="dice-8-edge">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-8-mid">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-8-edge">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+        <div class="dice-Outer">
+            <div class="dice-9">
+                <div class="dice-9-line">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-9-line">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+                <div class="dice-9-line">
+                    <span class="item"></span>
+                    <span class="item"></span>
+                    <span class="item"></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
