@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <style>
+        body {
+            /*background-image: url('.\\icon\\s.jpg');*/
+        }
+        song {
+            /*color: darkgrey;*/
+            color: #666666;
+            cursor: pointer;
+        }
+        #id-input-slide {
+            width: 100%;
+        }
+        .right {
+            display: inline-block;
+            float: right;
+        }
+        #player-song-title {
+            text-align: center;
+            /*height: 30px;*/
+            margin: 5px 0px;
+        }
+        .center {
+            text-align: center;
+        }
+        .player-play {
+            position: relative;
+            left: 10px;
+        }
+        .player-play button {
+            width: 50px;
+        }
+        .btn-left {
+            float: left;
+            style: none;
+            background: none;
+            border: none;
+        }
+        .btn-mid {
+            style: none;
+            background: none;
+            border: none;
+        }
+
+        .btn-right {
+            float: right;
+            style: none;
+            background: none;
+            border: none;
+        }
+        li {
+            list-style: none;
+            padding: 10px;
+        }
+        .play-list-container {
+            border-bottom: 1px solid darkgrey;
+            padding: 20px 0;
+        }
+        input[type="range"] {
+           -webkit-box-shadow: 0   0    5px   rgba(0, 0, 0, 0.5);
+           /*0 1px 0 0px #424242, 0 1px 0 #060607 inset, 0px 2px 10px 0px black inset, 1px 0px 2px rgba(0, 0, 0, 0.4) inset, 0 0px 1px rgba(0, 0, 0, 0.6) inset;*/
+           margin-top: 2px;
+           background-color: #458B74;
+           border-radius: 15px;
+           -webkit-appearance: none;
+           height: 8px;
+       }
+       input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            cursor: default;
+            /*top: -5px;*/
+            height: 13px;
+            width: 13px;
+            background: none repeat scroll 0 0 #FFF;
+            border-radius: 15px;
+            -webkit-box-shadow: 0 -1px 1px black inset;
+        }
+        h2 {
+            color: #666666;
+        }
+        h4 {
+            border-bottom: 1px solid darkgrey;
+            padding-bottom: 10px;
+            color: darkgrey;
+            margin: 0;
+        }
+    </style>
+    <script src='http://cdn.bootcss.com/jquery/3.1.1/jquery.js'></script>
+    <script>
+    // 应该新建一个对象来保存播放数据
+    // 包括播放模式 和 播放列表
+    // 注意全局变量
+    var playerMode = 'loop'
+        var log = function(event) {
+            console.log.apply(console, arguments)
+        }
+        var bindSwitch = function() {
+            var player = $('#id-audio-player')[0]
+            $('song').on('click', function(e) {
+                var self = $(e.target)
+                var song = self.text()
+                // 根据当前播放状态来设置autoplay
+                player.autoplay = !player.paused
+                player.src = 'C:\\Users\\建苍\\Music\\' + song + '.mp3'
+                $('#player-song-title').text(song)
+                // log(e)
+                // log(self)
+            })
+        }
+        var bindTimeSlider = function() {
+            var player = $('#id-audio-player')[0]
+            $('#id-input-slide').on('change', function(e) {
+                var value = e.target.value
+                log('slide\'s value changes',typeof value, value)
+                playerSetTime(parseInt(value))
+            })
+        }
+        var playerSetTime = function(value) {
+            var player = $('#id-audio-player')[0]
+            var time = player.duration * value / 100
+            player.currentTime = time
+        }
+        var bindAudioEvents = function() {
+            $('#id-audio-player').on('timeupdate', function(e) {
+                var player = e.target
+                // log('timeupdate', e)
+                var value = player.currentTime / player.duration * 100
+                // log(player.currentTime, value)
+                setSlide(value)
+                // 设置当前时间
+                var currentTime = player.currentTime
+                var time = labelFromString(currentTime)
+                $('#id-time-current').text(time)
+            })
+            // 歌曲结束收 根据模式 做出选择
+            $('#id-audio-player').on('ended', function(e) {
+                log('播放模式', playerMode)
+
+            })
+            // 每次重新加载音乐后的事件
+            $('#id-audio-player').on('canplay', function(e) {
+                var player = e.target
+                var duration = player.duration
+                log('can play', duration)
+                // 让滑条归位
+                setSlide(0)
+                $('#id-time-current').text('0:00')
+                var time = labelFromString(duration)
+                $('#id-time-duration').text(time)
+            })
+        }
+        var prevSong = function() {
+            log('prev')
+        }
+        var nextSong = function() {
+            log('next')
+        }
+        var pauseSong = function(button) {
+            log('play')
+            var player = $('#id-audio-player')[0]
+            button.dataset.action = 'pause'
+            $(button).text('暂停')
+            player.play()
+        }
+        var playSong = function(button) {
+            var player = $('#id-audio-player')[0]
+            player.pause()
+            log('pauseSong', player.paused)
+            // 更改当前按键变成play
+            button.dataset.action = 'play'
+            $(button).text('播放')
+        }
+        var bindPlayEvents = function() {
+            $('.player-play').on('click', 'button',function(e) {
+                var button = e.target
+                // 这里是关键，利用dataset的方法来调用不同的方法
+                var type = button.dataset.action
+                var actions = {
+                    prev: prevSong,
+                    next: nextSong,
+                    play: pauseSong,
+                    pause: playSong,
+                }
+                var action = actions[type]
+                action(button)
+            })
+        }
+        var playerSetPlayMode = function(mode) {
+            playerMode = mode
+        }
+        var bindModeEvents = function() {
+            $('.player-mode').on('click', 'button',function(e) {
+                var button = e.target
+                // 这里是关键，利用dataset的方法来调用不同的方法
+                var mode = button.dataset.action
+                // var actions = {
+                //     single: singleSong,
+                //     loop: loopSong,
+                //     random: randomSong,
+                // }
+                // var action = actions[mode]
+                playerSetPlayMode(mode)
+            })
+        }
+        var labelFromString = function(time) {
+            var minute = Math.floor(time / 60)
+            var second = Math.floor(time % 60)
+            if (second < 10) {
+                second = '0' + second
+            }
+            var label = `${minute}:${second}`
+            return label
+        }
+        var setSlide = function(value) {
+            $('#id-input-slide').val(value)
+        }
+        var bindEvents = function() {
+            bindSwitch()
+            bindTimeSlider()
+            bindAudioEvents()
+            bindPlayEvents()
+            bindModeEvents()
+        }
+        var __main = function() {
+            bindEvents()
+        }
+        $(document).ready(function(){
+            __main()
+        })
+    </script>
+</head>
+<body>
+<div>
+<div style="text-align:center">
+    <h2>Minimal Player</h2>
+</div>
+    <audio id="id-audio-player" preload="" > <!-- autoplay="" -->
+        <!-- default source -->
+        <source src='C:\Users\建苍\Music\我爱台妹.mp3' />
+    </audio>
+    <div class='player-controls'>
+        <div class='player-slide'>
+            <input id=id-input-slide type='range' value=0 min=0 max=100 />
+        </div>
+        <div class='player-time'>
+            <time id=id-time-current class=left >0:00</time>
+            <time id=id-time-duration class=right >2:31</time>
+        </div>
+        <br />
+        <h3 id='player-song-title'>我爱台妹</h3>
+        <div style="text-align:center">
+            <h4>MC hotdog ft.张震岳</h4>
+        </div>
+        <div class="play-list-container">
+            <ul>
+                <li>
+                    <song><b>我爱台妹 -- MC hotdog，张震岳</b></song>
+                </li>
+                <li>
+                    <song>幹物女</song>
+                </li>
+                <li>
+                    <song>关于小熊 -- 蛋堡</song>
+                </li>
+                <li>
+                    <song>Too Close -- Alex Clare</song>
+                </li>
+                <li>
+                    <song>Centuries -- Fall Out Boy</song>
+                </li>
+            </ul>
+        </div>
+        <br /><br />
+        <div class='player-play center'>
+            <button class='btn-left' type='button' data-action=prev><img src='.\\icon\\left.png'/></button>
+            <button class='btn-mid' type='button' data-action=pause><img src='.\\icon\\play.png'/></button>
+            <button class='btn-right' type='button' data-action=next><img src='.\\icon\\right.png'/></button>
+        </div>
+        <!-- <div class='player-mode center'>
+            <button class='btn-left' type='button' data-action=single>单曲</button>
+            <button class='btn-mid' type='button' data-action=loop>循环</button>
+            <button class='btn-right' type='button' data-action=random>随机</button>
+        </div> -->
+    </div>
+</div>
+</body>
+</html>
