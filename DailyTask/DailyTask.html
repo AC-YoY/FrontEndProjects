@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>DailyTask</title>
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.css" rel="stylesheet">
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" rel="stylesheet">
+    <style>
+        * {
+            text-align: center;
+        }
+        body{
+            /*用了express将icon文件夹设置为可访问之后，
+            图片路径就少了icon*/
+            /*background-image: url(".\\icon\\1.jpg");*/
+            background-image: url(".\\1.jpg");
+        }
+        .dt-title {
+            /*background-image: url(".\\icon\\1.jpg");*/
+            background-image: url(".\\1.jpg");
+            padding: 8%;
+            filter: blur(2px);
+            /*border-bottom: 2px solid #9D6A29;*/
+        }
+        .span-title {
+            position: absolute;
+            top: 1.5%;
+            left: 50%;
+            font-size: 23px;
+            color: #9D6A29;
+            transform: translateX(-50%);
+        }
+        .dt-nav {
+            /*position: absolute;*/
+            border-top: 2px solid #9D6A29;
+            border-bottom: 2px solid #9D6A29;
+            padding: 10px 0;
+        }
+        #id-input {
+            width: 60%;
+            display: inline;
+            color: darkgrey;
+        }
+        .dt-nav .btn {
+            position: relative;
+            bottom: 2px;
+        }
+        span  {
+            background: none;
+        }
+        .dt-container {
+            margin: 20px 0;
+            padding: 0;
+        }
+        .todo-cell {
+            font-size: 16px;
+            position: relative;
+            margin: 15px 0;
+        }
+        .todo-cell span {
+            color: white;
+        }
+        .btn-group {
+            position: absolute;
+            right: 10px;
+        }
+        .todo-time {
+            position: absolute;
+            left: 10px;
+        }
+        .todo-content {
+            position: relative;
+            left: -30px;
+        }
+        .complete {
+            text-decoration: line-through;
+        }
+    </style>
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.js"></script>
+    <script src=".\jsMethod\Ajax.js"></script>
+</head>
+<body>
+    <div class="dt-title">
+    </div>
+    <span class="span-title" style="font-family:STHUPO;">
+        今日事 <span style="font-size:25px;">今</span>日毕
+    </span>
+    <div class="dt-nav">
+        <input id="id-input" class="form-control" type="text" value="做点什么呢？" />
+        <button class="btn btn-primary" type="button">新任务！</button>
+    </div>
+
+    <div class="dt-container">
+
+    </div>
+<script>
+var log = function() {
+    console.log.apply(console, arguments)
+}
+// 唯一一个全局变量
+var id = 0
+var bindInput = function() {
+    $('#id-input').on('focus', function() {
+        if($('#id-input').val() === "做点什么呢？") {
+            $('#id-input').val("")
+        }
+    })
+    $('#id-input').on('blur', function() {
+        if($('#id-input').val() === "") {
+            $('#id-input').val("做点什么呢？")
+        }
+    })
+    $('#id-input').on('keydown', function(event) {
+        if (event.key == "Enter") {
+            var input = $('#id-input').val()
+            insertTodoCellBE(input)
+        }
+    })
+    $('.btn-primary').on('click', function() {
+        var input = $('#id-input').val()
+        insertTodoCellBE(input)
+    })
+}
+var insertTodoCell = function(cellID, time, value) {
+    var t = templateTodo(cellID, time, value)
+    $('.dt-container').append(t)
+}
+var insertTodoCellBE = function(value) {
+    // 这个使用ajax来交互数据
+    var todo = {
+        id: id,
+        time : currentTime(),
+        task : value,
+    }
+    var ajaxIns = new AjaxApi('http://localhost:8082')
+    ajaxIns.add(todo, function(returnData) {
+        insertTodoCell(id, currentTime(), value)
+        id++
+    })
+}
+var bindRecordOperation = function() {
+    $('.dt-container').on('click', '.btn', function(event) {
+        var target = $(event.target)
+        if(target.hasClass('btn-success')) {
+            var todoCell = target.closest('.todo-cell')
+            todoCell.find('span').toggleClass('complete')
+        } else if (target.hasClass('btn-warning')) {
+
+            var todoCell = target.closest('.todo-cell')
+            var delID = todoCell.data().id
+            var ajaxIns = new AjaxApi('http://localhost:8082')
+            ajaxIns.delete(delID, function(returnData) {
+                target.closest('.todo-cell').remove()
+            })
+        }
+    })
+}
+
+// 下面开始保存数据
+AjaxApi.prototype.all = function(callback) {
+    var path = '/all'
+    this.get(path, callback)
+}
+AjaxApi.prototype.add = function(data, callback) {
+    var path = '/add'
+    var dataSend = JSON.stringify(data)
+    this.post(path, dataSend, callback)
+}
+AjaxApi.prototype.delete = function(id, callback) {
+    var path = '/delete/' + id
+    this.get(path, callback)
+}
+
+var loadTodo = function() {
+    var arr = []
+    var ajaxIns = new AjaxApi('http://localhost:8082')
+    ajaxIns.all(function(data) {
+        arr = JSON.parse(data)
+        log(1 + arr)
+    })
+    log(2 + arr)
+    return arr
+}
+// 这边有问题
+var initTodo = function () {
+    var todoList = loadTodo()
+    // log(todoList)
+    if(todoList.length != 0) {
+        for (var i = 0; i < todoList.length; i++) {
+            var oldID = todoList[i].id
+            var time = todoList[i].time
+            var task = todoList[i].task
+            insertTodoCell(oldID, time, task)
+            if(id < oldID) {
+                id = oldID
+            }
+        }
+    }
+}
+var deepCopy = function(o) {
+    if (o instanceof Array) {
+        var n = [];
+        for (var i = 0; i < o.length; ++i) {
+            n[i] = deepCopy(o[i]);
+        }
+        return n;
+
+    } else if (o instanceof Object) {
+        var n = {}
+        for (var i in o) {
+            n[i] = deepCopy(o[i]);
+        }
+        return n;
+    } else {
+        return o;
+    }
+}
+
+var templateTodo = function (id, time, input) {
+    var t = `
+        <div class='todo-cell' data-id=${id}>
+            <span class="todo-time">${time}</span>
+            <span class="todo-content">${input}</span>
+            <div class="btn-group" data-toggle="buttons">
+                <button class="btn btn-success btn-xs" type="button">完成</button>
+                <button class="btn btn-warning btn-xs" type="button">放弃</button>
+            </div>
+        </div>
+    `
+    return t
+}
+var currentTime = function () {
+    var d = new Date()
+    var str = ""
+    var hours = d.getHours()
+    var minutes = d.getMinutes()
+    if(hours/10 >= 1) {
+        str += hours
+    }else {
+        str = str + "0" + hours
+    }
+    str += ":"
+    if(minutes/10 >= 1) {
+        str += minutes
+    }else {
+        str = str + "0" + minutes
+    }
+    return str
+}
+var bindAll = function () {
+    bindInput()
+    bindRecordOperation()
+}
+var __main = function () {
+    bindAll()
+    initTodo()
+}
+$(document).ready(function() {
+    __main()
+})
+</script>
+</body>
+</html>

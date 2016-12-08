@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <style>
+    @media (max-width: 768px) {
+        .div-mid {
+            flex-direction: column;
+            flex: 1;
+        }
+        nav,main,aside {
+            flex: auto;
+        }
+    }
+        .HolyGrail {
+            display: flex;
+            flex-direction: column;
+            min-height: 50vh;
+            text-align: center;
+            font-size: 20px;
+        }
+        header,footer {
+            background-color: #2B2B2B;
+            color: white;
+            height: 100px;
+        }
+        .div-mid {
+            display: flex;
+            flex: 1;
+        }
+        main {
+            flex: 1;
+        }
+        nav,aside {
+            flex: 0 0 10em;
+        }
+        nav {
+            order: -1;
+            background-color: lightblue;
+        }
+        aside {
+            background-color: orange;
+        }
+    </style>
+</head>
+<body class="HolyGrail">
+    <header>
+        Header
+    </header>
+    <div class="div-mid">
+        <main>
+            center
+        </main>
+        <nav>
+            left
+        </nav>
+        <aside>
+            right
+        </aside>
+    </div>
+    <footer>
+        Footer
+    </footer>
+</body>
+</html>
