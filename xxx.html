@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+        <style>
+            .c1 {
+                background-color: red;
+                width: 500px;
+                height: 200px;
+            }
+            .c2 {
+                background-color: green;
+                width: 500px;
+                height: 200px;
+            }
+            .c3 {
+                background-color: yellow;
+                width: 500px;
+                height: 200px;
+            }
+            .con {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="con">
+            <div class="c1">
+
+            </div>
+            <div class="c2">
+
+            </div>
+        </div><br />
+        <button>点我</button>
+        <script>
+            var e = document.querySelector("button")
+            e.addEventListener("click", function() {
+                console.log("a")
+                var con = document.querySelector(".con")
+                var t = "<div class='c3'></div>"
+                con.insertAdjacentHTML("beforeend", t)
+            })
+        </script>
+    </body>
+</html>
