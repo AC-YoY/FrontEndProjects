@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>多列不定宽（随着内容改变），一列自适应</title>
+        <style>
+        /* 不定宽部分 宽度随内容而改变 所以只能设定右边间距
+            而自适应部分 不应该 设定宽度 */
+            .con {
+                border: 1px solid lime;
+                height: 500px;
+                width: 800px;
+            }
+            .left ,.center {
+                border: 1px solid blue;
+                float: left;
+                margin-right: 20px;
+            }
+            .right {
+                border: 1px solid black;
+                overflow: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="con">
+            <div class="left">
+                I'm left
+            </div>
+            <div class="center">
+                I'm center
+            </div>
+            <div class="right">
+                I'm right
+            </div>
+        </div>
+    </body>
+</html>

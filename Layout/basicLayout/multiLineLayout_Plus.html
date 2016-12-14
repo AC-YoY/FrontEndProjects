@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>多列内容不同时，背景等高</title>
+        <style>
+        /* 不定宽部分 宽度随内容而改变 所以只能设定右边间距
+            而自适应部分 不应该 设定宽度 */
+            .con {
+                border: 1px solid lime;
+                width: 800px;
+
+                overflow: hidden;
+            }
+            .left ,.center {
+                border: 1px solid blue;
+                float: left;
+                margin-right: 20px;
+                width: 100px;
+                /* 重点 */
+                margin-bottom: -9999px;
+                padding-bottom: 9999px;
+            }
+            .right {
+                border: 1px solid black;
+                height: 300px;
+                margin-left: 240px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="con">
+            <div class="left">
+                I'm left
+            </div>
+            <div class="center">
+                I'm center
+            </div>
+            <div class="right">
+                I'm right
+            </div>
+        </div>
+    </body>
+</html>
