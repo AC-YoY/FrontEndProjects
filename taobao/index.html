@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>淘宝网-淘！我喜欢</title>
+    <link rel="stylesheet" href="css/taobao_css.css" />
+    <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.js"></script>
+    <script src="js/taobao_js.js" /></script>
+</head>
+
+<body>
+    <!-- 导航栏 -->
+    <header>
+        <div class="header-content">
+            <div class="head-left">
+                <ul>
+                    <li>
+                        <a href="#"><span>亲，请登录</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span>免费注册</span></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="head-right">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span>我的淘宝</span>
+                        </a>
+                        <div class="site-nav-icon site-nav-down"></div>
+                        <div class="site-nav-pulldown">
+                            <a href="#"><span>已买到的宝贝</span></a><br />
+                            <a href="#"><span>我的足迹</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="site-nav-icon site-nav-cart"></div>
+                            <span>购物车</span>
+                        </a>
+                        <div class="site-nav-icon site-nav-down"></div>
+                        <div class="site-nav-pulldown">
+                            <a href="#"><span>查看我的购物车</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="site-nav-icon site-nav-fav"></div>
+                            <span>收藏夹</span>
+                        </a>
+                        <div class="site-nav-icon site-nav-down"></div>
+                        <div class="site-nav-pulldown">
+                            <a href="#"><span>收藏的宝贝</span></a><br />
+                            <a href="#"><span>收藏的店铺</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span>联系客服</span>
+                        </a>
+                        <div class="site-nav-icon site-nav-down"></div>
+                        <div class="site-nav-pulldown">
+                            <a href="#"><span>消费者客服</span></a><br />
+                            <a href="#"><span>卖家客服</span></a>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <div class="site-nav-icon site-nav-category"></div>
+                            <span>网站导航</span>
+                        </a>
+                        <div class="site-nav-icon site-nav-down"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- 第一模块 -->
+    <div class="J-CUP">
+        <!-- logo & search -->
+        <div class="J-top">
+            <a href="#">
+                <div class="logo"></div>
+            </a>
+            <div class="searchWrap">
+                <div class="searchModule">
+                    <div class="search-title">
+                        <div class="search-shift shift-active-default" data-type=0>
+                            宝贝
+                        </div>
+                        <div class="search-shift" data-type=1>
+                            天猫
+                        </div>
+                        <div class="search-shift" data-type=2>
+                            店铺
+                        </div>
+                    </div><br />
+                    <div class="search-box">
+                        <form acction="" method="get">
+                            <input class="search-input" type="text" name="name" value="你想买啥？"/>
+                            <input class="search-btn" type="submit" value="搜索"/>
+                        </form>
+                    </div>
+                </div>
+                <div class="highlvSearch">
+                    <a href="#"><span>高级搜索</span></a>
+                </div><br />
+                <div class="searchKeyWords">
+                    <ul>
+                        <li>
+                            <a href="#"><span>射灯</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>篮球鞋</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>棉服</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>毛呢外套</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>贸易</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>女士羽绒服</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>男士鞋子</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>毛针织衫</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>更多 ></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="mobileLink">
+                <span>手机淘宝</span>
+                <div class="mobileQRCode">
+
+                </div>
+            </div>
+        </div>
+        <!-- 主页商品分类 -->
+        <div class="J-screen">
+            <div class="J-nav">
+                <div class="J-nav-title">
+                    <a href="#">
+                        <span>主题市场</span>
+                        <div class="J-nav-list J-nav-icon"></div>
+                    </a>
+                </div>
+                <ul>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                    <li>
+                        <div class="vertical-center J-nav-clothes J-nav-icon"></div>
+                        <div>
+                            <a href="#"><span>女装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>男装</span></a>
+                            <span> / </span>
+                            <a href="#"><span>内衣</span></a>
+                        </div>
+                        <div class="vertical-center J-nav-rightArr">
+                            >
+                        </div>
+                    </li>
+                </ul>
+                <div class="J-nav-bottom"></div>
+                <div class="J-nav-serviceFloat">
+                    <div class="vertical-center J-nav-sf-left">
+                        <div class="sf-panel">
+                            <h4><div class="sf-icon sf-pic1" ></div><span>&nbsp;女装</span><span>更多 ></span></h4>
+                            <p>冬新品 羽绒服 连衣裙 毛呢外套 大码女装 毛衣 裤子 毛针织衫 棉衣/棉服 皮草 皮衣 打底衫 套装 妈妈装 西装 卫衣 冬外套 小西装 半身裙 牛仔裤 高腰裤 红人私服 甜美风 文艺风 街头风 原创单品 通勤风 大厂直供 腔调 潮流志 淘品牌 风衣 衬衫</p>
+                        </div>
+                        <div class="sf-panel">
+                            <h4><div class="sf-icon sf-pic2"></div><span>&nbsp;男装</span><span>更多 ></span></h4>
+                            <p>冬新品 羽绒服 连衣裙 毛呢外套 大码女装 毛衣 裤子 毛针织衫 棉衣/棉服 皮草 皮衣 打底衫 套装 妈妈装 西装 卫衣 冬外套 小西装 半身裙 牛仔裤 高腰裤 红人私服 甜美风 文艺风 街头风 原创单品 通勤风 大厂直供 腔调 潮流志 淘品牌 风衣 衬衫</p>
+                        </div>
+                        <div class="sf-panel">
+                            <h4><div class="sf-icon sf-pic3"></div><span>&nbsp;内衣</span><span>更多 ></span></h4>
+                            <p>冬新品 羽绒服 连衣裙 毛呢外套 大码女装 毛衣 裤子 毛针织衫 棉衣/棉服 皮草 皮衣 打底衫 套装 妈妈装 西装 卫衣 冬外套 小西装 半身裙 牛仔裤 高腰裤 红人私服 甜美风 文艺风 街头风 原创单品 通勤风 大厂直供 腔调 潮流志 淘品牌 风衣 衬衫</p>
+                        </div>
+                    </div>
+                    <div class="vertical-center J-nav-sf-right">
+                        <h4><div class="sf-heart"></div>猜你喜欢</h4>
+                        <div class="sf-assist">
+                            实时推荐最适合你的宝贝
+                        </div>
+                        <div class="sf-list">
+                            <div class="sf-img-1 sf-list-img"></div>
+                            <div class="sf-img-2 sf-list-img"></div>
+                            <div class="sf-img-3 sf-list-img"></div>
+                            <div class="sf-img-4 sf-list-img"></div>
+                            <div class="sf-img-5 sf-list-img"></div>
+                            <div class="sf-img-6 sf-list-img"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="J-content">
+                <div class="J-con-title">
+                    <ul class="J-title-1">
+                        <li>
+                            <a href="#"><span>天猫</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>聚划算</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>天猫超市</span></a>
+                        </li>
+                    </ul>
+                    <ul class="J-title-2">
+                        <li>
+                            <a href="#"><span>淘抢购</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>电器城</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>司法拍卖</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>中国制造</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>特色中国</span></a>
+                        </li>
+                    </ul>
+                    <ul class="J-title-3">
+                        <li>
+                            <a href="#"><span>飞猪旅行</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>智能生活</span></a>
+                        </li>
+                        <li>
+                            <a href="#"><span>苏宁易购</span></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="J-slider">
+                    <div class="J-s-up">
+                        <div class="slider-img-box" data-index=0 data-images=3>
+                            <img class="slider-img slider-active" src="https://img.alicdn.com/tps/TB1UFEoOFXXXXcraFXXXXXXXXXX-520-280.jpg_.webp" alt="Pic1"/>
+                            <img class="slider-img" src="https://img.alicdn.com/tps/TB163WIKVXXXXc5XFXXXXXXXXXX-520-280.jpg_.webp" alt="Pic2"/>
+                            <img class="slider-img" src="https://img.alicdn.com/simba/img/TB10AcmOFXXXXb0aFXXSutbFXXX.jpg" alt="Pic3"/>
+                            <button class="slider-btn slider-btn-left vertical-center" type="button"><</button>
+                            <button class="slider-btn slider-btn-right vertical-center" type="button">></button>
+                        </div>
+                        <div class="thumb-nails-box" data-index=0 data-images=3>
+                            <div class="thumb-nail thumb-active"></div>
+                            <div class="thumb-nail"></div>
+                            <div class="thumb-nail"></div>
+                        </div>
+                    </div>
+                    <div class="J-s-mid">
+                        <div>
+                            <span>天猫必逛</span>
+                            热门品牌,天天上天猫!
+                        </div>
+                        <strong>
+                            <i>1</i>/3
+                        </strong>
+                    </div>
+                    <div class="J-s-down">
+                        <div class="slider-img-box" data-index=0 data-images=3>
+                            <img class="vertical-center slider-img slider-active" src="https://aecpm.alicdn.com/simba/img/TB1X6uHLVXXXXcCXVXXSutbFXXX.jpg" alt="Pic1"/>
+                            <img class="vertical-center slider-img" src="https://img.alicdn.com/tps/i4/TB1GQICOFXXXXbsXFXXSutbFXXX.jpg_240x240q90.jpg" alt="Pic2"/>
+                            <img class="vertical-center slider-img" src="https://img.alicdn.com/tps/i4/TB10AAvOFXXXXaVXVXXSutbFXXX.jpg_240x240q90.jpg" alt="Pic3"/>
+                            <button class="slider-btn slider-btn-left vertical-center" type="button"><</button>
+                            <button class="slider-btn slider-btn-right vertical-center" type="button">></button>
+                        </div>
+                        <div class="thumb-nails-box" data-index=0 data-images=3>
+                            <div class="thumb-nail thumb-active"></div>
+                            <div class="thumb-nail"></div>
+                            <div class="thumb-nail"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="J-picWindow">
+                    <div class="J-p1">
+                        <a href="#"><img src="https://img.alicdn.com/tps/TB1_ZEeOFXXXXcxaXXXXXXXXXXX-160-280.png_290x290q90_.webp" alt="J-p1"/></a>
+                    </div>
+                    <div class="J-p2">
+                        <span>今日特卖</span>
+                    </div>
+                    <div class="J-p3">
+                        <a herf="#"><img src="https://aecpm.alicdn.com/simba/img/TB1j4LLKpXXXXcbaXXXSutbFXXX.jpg" alt="J-p2"/></a>
+                    </div>
+                </div>
+                <div class="J-aside">
+                    <div class="J-a-login">
+                        <div class="J-a-avatar">
+                            <a href="#"><img src="https:////wwc.alicdn.com/avatar/getAvatar.do?userNick=&width=60&height=60&type=sns&_input_charset=UTF-8" alt="J1" /></a>
+                        </div>
+                        <div class="J-a-2">
+                            <span>Hi! 你好</span>
+                            <p>
+                                <a href="#">领取淘金币</a> <span>或去</span> <a href="#">会员俱乐部</a>
+                            </p>
+                        </div>
+                        <div class="J-a-btns">
+                            <button>登陆</button>
+                            <button>注册</button>
+                            <button>开店</button>
+                        </div>
+                    </div>
+                    <div class="J-a-msg">
+                        <ul class="msg-title" data-index=0>
+                            <li>
+                                公告
+                            </li>
+                            <li>
+                                规则
+                            </li>
+                            <li>
+                                论坛
+                            </li>
+                            <li>
+                                安全
+                            </li>
+                            <li>
+                                公益
+                            </li>
+                        </ul>
+                        <div class="J-msgbox">
+                            <ul class="msg-active">
+                                <li>
+                                    大众评审乡村医院开建
+                                </li>
+                                <li>
+                                    闲鱼公益上线招募NGO
+                                </li>
+                                <li>
+                                    阿里与残联出助残政策
+                                </li>
+                                <li>
+                                    公益宝贝卖家发票索取
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    噢噢噢噢噢噢噢噢哦哦
+                                </li>
+                                <li>
+                                    噢噢噢噢噢噢噢噢哦哦
+                                </li>
+                                <li>
+                                    噢噢噢噢噢噢噢噢哦哦
+                                </li>
+                                <li>
+                                    噢噢噢噢噢噢噢噢哦哦
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    啊啊啊啊啊啊啊啊啊啊
+                                </li>
+                                <li>
+                                    啊啊啊啊啊啊啊啊啊啊
+                                </li>
+                                <li>
+                                    啊啊啊啊啊啊啊啊啊啊
+                                </li>
+                                <li>
+                                    啊啊啊啊啊啊啊啊啊啊
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    耶耶耶耶耶耶耶耶耶也
+                                </li>
+                                <li>
+                                    耶耶耶耶耶耶耶耶耶也
+                                </li>
+                                <li>
+                                    耶耶耶耶耶耶耶耶耶也
+                                </li>
+                                <li>
+                                    耶耶耶耶耶耶耶耶耶也
+                                </li>
+                            </ul>
+                            <ul>
+                                <li>
+                                    嗯嗯嗯嗯嗯嗯嗯嗯讷讷
+                                </li>
+                                <li>
+                                    嗯嗯嗯嗯嗯嗯嗯嗯讷讷
+                                </li>
+                                <li>
+                                    嗯嗯嗯嗯嗯嗯嗯嗯讷讷
+                                </li>
+                                <li>
+                                    嗯嗯嗯嗯嗯嗯嗯嗯讷讷
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="J-a-helper">
+                        <ul>
+                            <li>
+                                <img src="./images/msg-1.png" alt="p1"/>
+                                <span>充话费</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-2.png" alt="p1"/>
+                                <span>游戏</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-3.png" alt="p1"/>
+                                <span>旅行</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-4.png" alt="p1"/>
+                                <span>车险</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-5.png" alt="p1"/>
+                                <span>彩票</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-6.png" alt="p1"/>
+                                <span>电影</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-7.png" alt="p1"/>
+                                <span>外卖</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-8.png" alt="p1"/>
+                                <span>理财</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-9.png" alt="p1"/>
+                                <span>找服务</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-10.png" alt="p1"/>
+                                <span>音乐</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-11.png" alt="p1"/>
+                                <span>水电煤</span>
+                            </li>
+                            <li>
+                                <img src="./images/msg-12.png" alt="p1"/>
+                                <span>火车票</span>
+                            </li>
+                        </ul>
+                        <div class="J-a-helper-ex">
+
+                        </div>
+                        <span class="J-a-helper-app">阿里APP</span>
+                        <a class="J-a-helper-app2" href="#"><span>更多 ></span></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 这个部分的作用显而易见，撑起整个J-screen部分 -->
+        <div class="nothing">
+
+        </div>
+    </div>
+    <!-- 第二模块 -->
+    <div class="J-seat">
+        <div class="J-seat-left">
+            <div class="J-seat-belt">
+                <a class="belt-1" href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB1sU3AJVXXXXcBXVXXSutbFXXX.jpg_60x60q90_.webp" alt="p1"/>
+                    <strong>囤货一族</strong>
+                    <span>会囤会生活</span>
+                    <em>
+                        <i></i>
+                        人气627963
+                    </em>
+                </a>
+                <a class="belt-2" href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB1IwPTNVXXXXbxapXXSutbFXXX.jpg_60x60q90_.webp" alt="p1"/>
+                    <strong>摩登主妇</strong>
+                    <span>拒做黄脸婆</span>
+                    <em>
+                        <i></i>
+                        人气2151144
+                    </em>
+                </a>
+                <a class="belt-3" href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB2kEUNbvSM.eBjSZFNXXbgYpXa_!!0-juitemmedia.jpg_60x60q90_.webp" alt="p1"/>
+                    <strong>吃货的后裔</strong>
+                    <span>翻滚吧美食君</span>
+                    <em>
+                        <i></i>
+                        人气445381
+                    </em>
+                </a>
+                <a class="belt-4" href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB2CB27aqbyQeBjy1XbXXa9yXXa_!!0-juitemmedia.jpg_60x60q90_.webp" alt="p1"/>
+                    <strong>无辣不欢</strong>
+                    <span>辣即正义</span>
+                    <em>
+                        <i></i>
+                        人气17607
+                    </em>
+                </a>
+                <a class="belt-5" href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB2ya9VXyKO.eBjSZPhXXXqcpXa_!!0-juitemmedia.jpg_60x60q90_.webp" alt="p1"/>
+                    <strong>重口味星人</strong>
+                    <span>你敢挑战吗</span>
+                    <em>
+                        <i></i>
+                        人气34660
+                    </em>
+                </a>
+            </div>
+            <h3 class="whiteSpace">我常逛的</h3>
+            <div class="J-seat-picCon">
+                <div class="J-seat-pic">
+                    <div class="J-pic-sidebar">
+                        <img src="https://img.alicdn.com/tps/TB1JTeNMXXXXXb.XXXXXXXXXXXX-200-200.png_100x100q90.jpg_.webp" alt="p1"/>
+                        <div class="sidebar-text">
+                            <strong>热门TOP</strong><br />
+                            <p>T恤</p><br />
+                            <p>针织衫</p><br />
+                            <p>连衣裙</p><br />
+                            <p>东大门</p><br />
+                            <p>卫衣</p><br />
+                            <p>风衣</p><br />
+                            <p>沙发</p><br />
+                            <p>单肩包</p><br />
+                            <p>毛衣</p><br />
+                            <p>半身裙</p>
+                        </div>
+                    </div>
+                    <div class="J-pic-contain">
+                        <div class="J-pic-up">
+                            <div class="rowFlexBox">
+                                <div class="colFlexBox">
+                                    <img src="https://img.alicdn.com/i2/2/TB2BvNjhpXXXXccXpXXXXXXXXXX_!!103915621.jpg_80x80q90.jpg_.webp"/>
+                                    <img src="https://img.alicdn.com/i2/2/TB1T1KGJFXXXXbcaXXXSutbFXXX.jpg_80x80q90.jpg_.webp" />
+                                </div>
+                                <img src="https://img.alicdn.com/imgextra/i1/199/TB2o0U6XxXkpuFjy0FiXXbUfFXa_!!199-0-yamato.jpg_100x1000q90.jpg" />
+                                <img src="https://img.alicdn.com/imgextra/i2/126/TB2y.MTXZwb61Bjy0FfXXXvlpXa_!!126-0-yamato.jpg_150x10000q90.jpg" />
+                            </div>
+                        </div>
+                        <div class="J-div-down">
+                            <div class="tempFlex1 rowFlexBox">
+                                <img src="https://img.alicdn.com/tps/TB1XcwcOFXXXXc9XXXXXXXXXXXX-360-280.jpg_180x180q90.jpg" />
+                                <div class="colFlexBox">
+                                    <img src="https://img.alicdn.com/i2/2/TB1CgZ8MVXXXXXcXVXXSutbFXXX.jpg_60x60q90.jpg_.webp" />
+                                    <img src="https://img.alicdn.com/i2/2/TB1njboNVXXXXafXFXXSutbFXXX.jpg_60x60q90.jpg_.webp" />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="J-seat-pic2">
+                    <div class="J-pic-sidebar">
+                        <img src="./images/lost-1.png" alt="p1"/>
+                        <div class="sidebar-text">
+                            <strong>热门TOP</strong><br />
+                            <p>水族造景</p><br />
+                            <p>萌兔</p><br />
+                            <p>夏日狗窝</p><br />
+                            <p>仓鼠</p><br />
+                            <p>观赏鱼</p><br />
+                            <p>鲜花</p><br />
+                            <p>花盆</p><br />
+                            <p>永生花</p><br />
+                            <p>大型绿植</p><br />
+                            <p>陶瓷花盆</p>
+                        </div>
+                    </div>
+                    <div class="J-pic-contain">
+                        <div class="J-pic-up">
+                            <div class="rowFlexBox">
+                                <img src="https://img.alicdn.com/tps/TB1Pu9OMpXXXXaPXpXXXXXXXXXX-200-402.jpg_100x1000q90.jpg" />
+                                <div class="colFlexBox">
+                                    <img src="https://img.alicdn.com/tps/i1/TB1fxXGMpXXXXXtXpXXj64lTXXX-200-200.jpg_80x80q90.jpg_.webp"/>
+                                    <img src="https://img.alicdn.com/tps/TB1s8FjMXXXXXb_XXXXXXXXXXXX-120-120.jpg_80x80q90.jpg_.webp"/>
+                                </div>
+                                <img src="https://img.alicdn.com/tps/TB1X.p0OFXXXXa4XVXXXXXXXXXX-276-402.jpg_150x10000q90.jpg_.webp" />
+                            </div>
+                        </div>
+                        <div class="J-div-down">
+                            <div class="tempFlex2 rowFlexBox">
+                                <img src="https://img.alicdn.com/tps/TB19eA1LVXXXXaSaXXXXXXXXXXX-120-120.jpg_50x50q90.jpg_.webp" />
+                                <img src="https://img.alicdn.com/tps/TB1O0XjMXXXXXcmXXXXXXXXXXXX-120-120.jpg_50x50q90.jpg_.webp" />
+                                <img src="https://img.alicdn.com/tps/i1/TB187tfLpXXXXXaXFXXOyPdGpXX-140-140.jpg_50x50q90.jpg_.webp" />
+                                <img src="https://img.alicdn.com/tps/i2/TB1bx0dLpXXXXc_XXXXuAZJYXXX-180-180.png_50x50q90.jpg_.webp" />
+                                <img src="https://img.alicdn.com/tps/i1/TB1CpM_LXXXXXb.XFXXOyPdGpXX-140-140.jpg_50x50q90.jpg_.webp" />
+                                <img src="https://img.alicdn.com/tps/i2/TB1WjQ7LXXXXXX8XVXXOyPdGpXX-140-140.jpg_50x50q90.jpg_.webp" />
+                                <img src="https://img.alicdn.com/tps/i4/TB1pypgLpXXXXbwXpXXszjdGpXX-140-140.png_50x50q90.jpg_.webp" />
+                                <img src="https://img.alicdn.com/tps/i1/TB1Jjg2LXXXXXa8XFXXuAZJYXXX-180-180.png_50x50q90.jpg_.webp" />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="J-seat-right">
+            <div class="J-right-apps">
+                <ul>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRhAFAABXRUJQVlA4IAQFAAAQGACdASo8ADwAPmkqkUWkIqGYCwd8QAaEtgBakMDrPzD+c/i5+KvylVP+z/gPhoy3dg/8TpJ/kn2AP1A6RvmA/XP9jewB6AH9S/w/WIegB+4Hpm/tx8Hn7g/uh7Wd3l/n+VVPgPzvEXtV7vvBTSgzQvJP9UcComt+lIzP2PPWzchV0d12J+KCq6E/LTA1Mr5OwaE2YOJR0Vwzw3wLZdeSicUD5fL9E5FcEECUpGPeyiFz7ZYLbi82zMLvuDmdacireBt19rRl3wAA/v7Dm3mTAzbA3BXhNXEt9anW+n6ek/ORp9axOe9mp4WVqPxqDdu1Lu5fu15QsScwpf9inf5Xp37bCIKJ2mCM878aNkWzHdM/fNRp7n+zG64k+q03mS5ECLzyxpfx+B4YQI/BPwNyNZU0wyP/G2uka7XWy7PNlMd7b7Zu05hIw4J9RHfh+83N/+MbsosMNSYv6U1swwYJ2Phm663rQF1wRWwtek93YWl7vyJrl3O/f8TcWakYBIuGGsyQFxJr9MJN31i3BjQ5Wnv/imgIYcpZjNbNgFGT2xUB2XbmwkIcX05u2Ibc4iobFPV0yVYiqeUnh+GQBpXK/PwPHhetqgnKiQcsTr6xDohUuj9wrFIOReKJ7pcyhkC/h69SP/3UgDVD0CN+KQheDdjfU2/cCv5KprJXS34wBKYtMsLH8ktu8hxenKeMfepxNFfdLGeBPnE/+36u+j45B/blL9IyQ25YY9alenRTpB2j045QQTDJ0l/QOLGvgI6SsidxxRCTYiLVyqNUPfIYPuk9CHbnri6dQXPEqQ0dm2/oaA4QLesBFLML0EnnF9/ltFxGRuILmXscNXT+1DwEbwLwhjiFBeClxXMjJ2IirOV8Fv5nJOl4ESAN8kbdwIXcPVzoPHUg+ej9Nb/g7T+IXEz/mGkv7Ia27mb88dutRnJf8v0jgownAVsKaqd/6voVGAvqcDVSYfFNzr9hJrIVqEZL1/nv8jQenKNb0IS799M/i5AtTA/+Ot4f6NsNmDcD5Uj9R+PFA7hxgrddFJE56ajD2tUvdtY7ikMel8xMw5P36k5FJxbVCTPr/36uoUhQNSs9+IpjibAjjd3sxOatBRtqunhDVJZ9D/NrA9tnBn2x364gZz8Z/HHpskaUya6PL4SFBOD+EZxPZqIaVLn1lfBOJw9/w+JRjBviBX8HhXgXOx7xcF2D4ngOvRJTXRWDq6E1UxmshHyQcdb6zLYI3a9fTWGYYwosvNUxDoLYgLmm38lxtDLfrWqiWe/jHnzsVGiMP4Bf53ejqBel8sdO/t5P7xxBz0tWWmKWHKYKQj++KN6lDaKEGgQ5Hi74R9hROSfqfiwUvTkgiFVHN7vNgBdTAEOs4E2qm8BweSMUGa55z9xW3uUW5sbEvrzLd3aCfZYr6yp8c5Bq2U9p8ZfKUCW50TuWSvRGtTzba5atgF1rL/qH0Jh6J/EQQgpS2U0mDTRuW20gA4kyJPhO5Iwc51CpD2aE/EiJHrXSlESzQU4i3i9fH5IdRONVWwZznWNWeMzKsffndjGRqUc5+Z05NijdTKZ9MPEmOZ9b3dKN38Yp0sJpOq5ZirtpJ7xh9DlhqRm8ue8HaAbLV5xX7HipLZ92MuBDm0BKkBy1uDKT4FQ9UV3Kv/eG7HQt7anpEK/rAbF9Ww4sRDXYdZtbImvcnKadOtHDNemZ8WEkHh6/jVwAAAA=" />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,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" />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRrwEAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSNcAAAANz8GgbSRH57nv/Z8/2F8WEZHNnyHi88wGgzcm43aqSZ3baJLXYDA/PlFDAJYk2aatWte2bdt7/hO7fu/t/n8R0f/kFUwXM4mQ4cddtsvJ6spHshvGo4USmcKpseGtXMV7IN8YjHhW8ihi/dmQe7KKxvqDTbCHKtqqpyLI8scSOitmEWbjCOMhhCFDaPyr4gydu4TQXXZxdLtFFt1iXDRUbrI+5lHNgtd6K4rm0Oa+GfQNhavxHM76Mfzva7yNBs1cAL+3eYePTf1cyCRChh932S6nQV4AAABWUDggvgMAANASAJ0BKjwAPAA+kUCXSKWkIiEoG/6osBIJbADJvGRO1sz5zEOP0G2g8wH2gcIB/VeoA9ADyy/2S+Cv9wv2q9pa5tdFgiT/H+Vl1d+h4S9I7My8ZWoZ0jvQdPQ6ECxXJzL6ihzp9BH1kimsWNbKtACjfrnqF8xbeucoStbwnvSwLTlZDQxs+XsN/DebZ/v+mTOyZbwCgJRKkSB1jDAYAAD+/pCtcriOsduNFTdTp+eV5s5r8aGSf9yz/u5zP7gJBNRmRb5H8e9ifcS2//7DrXl3RbzOv3Gf94z/OfdW/466IRRgAypADHgNsa+3fw6fJ4mk579qCP0FcSd92iDkKmcWoH/8B3HBguo/ZkWU5ReePNc2a8aKsCQBBwkXYShT7mgwnEDlgbmV/yCunZrzf8pDnSgHtiI8GKWW38/FTwNx9otkRUuJ9imbYOn+1/JNa/LzjMuUn+tLY+f/A6dbYctmc40NEdWqsUg4CcKZiGhDk1oewtY5RHQD3t4tFDrwB0j5mfenAmEXkVka5Uj+PEqGb4pz3JKwKI77zjNOWSas4/C56VRZ8POP0XL8JrmPKUdxlgKEEvKEv33HtmmCf02BgOrINpAkM+Pq0d82Vs2qz9+8KB8GpnmPDBVNaIzze2jDuRKvzfdSkOyTgkABVUm9oWTqEsrKwfV5d4wGrTGIaTtD7RFaftj72KOERAUXsJlF80OPQRBbfa1vUZa+TkixZ2BSYnFYDYpMke3M/adcvsallRByw3yKFJrwT/Pb+krn+CdoGYSHbnyMxvV8/Po0z6MP+Wg11g2pOpymYCaG+/G9fdwYUzHjMDGEHn65q6pprlE0ZEogU8/aNTMJdDxZZ+KsicW40dxzEGB7vcUfH/L7Nk9nZ+DQEubfNMaXIOcaczO/RYaSaeeS6Wl14mo40Fe2Zfgr2CnH+iJYc5RV1tmgiA3qHb8t7/3N0m03pRJ+w+G5oHJc0gdhFqPu9UejjMi9zd/o/Zmf5YO8NzmfHJtkZKZp9P28W3Qk7qoaEuaxOFG6I5x97XyoO1Khf76jHV+suKpkiJ+hy6tJS5TsL7kT3Lqmy1BHL58d102Q6Mv2xQWx8Tl0+PKuTsQDZ8+/cEt81WPc9nOk+e6o8s9aNe7ZHmbbWBZQ31QqNCGUl3APHpzVW5wCFaDh7I4yGmeJkVnqxK0Q+sWJEXZA1HuuG1PuspuVGuYfSrrLqhf+n5EE73V12Dog5GuNUI0F2MC/oVQQ0EV0yWf0CKS7uMadC1sVJj//nxVGCxgAAAA=" />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRgAEAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSHwAAAABT6AmAJA2yoZrtiCCaYyIACzbn+8CTmvbjqq3UgMLnS7QODpgIXH4+fu5gAyn2+By/RcR/U8r/Z6p+o2N3f5N9eKsrAid+YTwcDNS+0QaAtKUkB4Z6cdfXUb6JaRHQJqeSMOM1PqE8HC2InRW/Jvqxdnd75mq39hYAQAAVlA4IF4DAACwEwCdASo8ADwAPok0l0elIqIhMBgO+KARCWwAyB3A2X4bfO/xa/GPrq9sHzTwNuv1AflX/gdMd+gHuA/aD1Afxz+y/tF7yPoW/xnpGdQB6AHSl/u96U7wAcIKpmpY+TN7h+qqM4ubmG0ibBoLmlceXOfIo1GB/JWlEudV+hsr7TReEdtF0wwDPiYyc+UbAImXs8SWeQZwifHtnxT/I9qz9KyhuRpgAP78Dxd8z1Vb9U2kwkidDgtf7DFdtwP4K0aa3/+e9SHl/j0Sg/7fSBX/9kENOfG2BdkMHdb9gsAzQuvoY/QPaf82UlHGNsmN+D5d6ek42ZH9CPwLH2rz7+rC8ZV9CgNcfWUipMaFt6E3ibUUc9EEs2+IvRDf+Jh9fgpQIvw+4KU26J84baTcd1Sxff6CXuuZ3jrGAL7kG4we1j9pNJd1HTUzuon8cCeH24QYKsFiHQMceVDAcM2ncC2PKGFAnmRyrP7gz9VbqLO1U4tR2Nrseb97L8ZlZbMI6/rtCYycK7HzliXWoFKZtQ0Q1lf04Z8xwfkgVJhRD7amTUS3k39GoKRZK7HseimRPn6IdciQ4Mayeb7NV7divHxrqBIeWuYoSx5Jl2JB7Legtf6lnz66P9prafB+Egk+CkPgMf/9mQEqrf12NYigDLeLumA606lzar3axkXDx3yVW0GUJMoIeHmKiDF9VUBXFAWDolXLOA4YFN6Ha5XyYYXejO2M5t4DRXVmt5jd14dLKgyuJny4sSriJxnWN12nBissK9y0f8yD0bRMy60iACxIen9YeRUw0RhKYoJQLc5EsyKhcnFus2LItQTQxL5laAHB1MCbyIe68FRH26JPslw3zvytP42IxDUn0HG9rr79c6YCACTppy/6zbVaOvHcN3NKeu46PX9I3n0kiYr8xK/Uh1m/WWvDB9zr15i3jMz3Sndcug57tORpKnFudPUMaBsl1fFqdu4CYxP2u9mQZqyderFI3v6inLvqbM+50mRzreYHnttgLcf/JY3d73OtUTLoPabMPDtk9n71p2Ne+dtPaiSQFQ3+Jd97McsJKIx4zpruD08IggE2KNnK+nU3yIRlu/i3TUVedAAnfpZoK/KeDelXSxzVB+LTqsT4XZaeUvjl4U6yqNXKw7VsWSAA" />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRm4FAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSO0CAAABd8agbSNJl8zxx9zZ945BROTDJ5nSBhkyZZFIXiISGbKXJZGWFGthkaKLiCyySaRltdkl0oYh/yHttm0zlnaSZ5tt27Zt27Zt27Zt213O/k1Vndzk5lbrY0T/E38NrU7NDMRN23p/XfMExKut33y9qV4K4pO6j7EXcyoiLtqA74wFLvfJ1xGHurdphU+NaJwK5aVnafc/ODijcWaiBpXFZ+j4btfYthUSoaz2LbqYr8+u6VkANfpoP93N0NctfSslwHuVO5QMnJ1ZCR6NhqcpH3wyo7IGLx1umPQSOdctBdLJAx/Ro/l+XhYkjVEf6D2ytgKkEge/oYrA7mzIDHlLRWsL4F7nCVV9n5gIt2oXqc7XDi7GsiAVPN7/g9axfDh3DFLS9zZM8WHj9OGf+evHGANOxccp+WlO59U/KazWkHuA1pliOOjDvlNyWzoy11Poi1h/WqHOcMg5TdleiNV8TntjxAp9tDbAoWWQstURS1tu0jaudlF2+nVa93IgLqV0VR2x3p9pN1/ubbqL1rtWEDIvUfritglt8uvfp+CbW7CS1vchEJo8padD5Rdp/zxFN1bQCk2D0OsjvVxtoB2j7du0DCRspmXOhzAqQA8X6mrYQ9uTGogm36JtAYTJJuUftERUP0Hbj+Ea6odomfMgTKX8t6E6oiXXaL/Sou5h2kLTIUwyKR1ZmIxoxzcUHj6I0OYbBWGkn/If26eWbo/Q/VMXCL0+0cOLZfsjlHhVC0KzZ1R+MwVC3jUqXwJR20jVZmc4dDKp+GIpHIrvUW1odhIcEqYFqfROLTjWvk2lszU4GmMiVGdeKYNLxkmqe91Nh4vW+g5VBaekwFXr+pFqfKuSIGGM/0IV4XUlkErs/4zePy1KgKTR4y69vh+eBWmt0rpP9PJ5Rx0dXjIHnqF06PygHHjU8/odfROme+jJke55OhSkdZh18oNJp/CTHVMapUBVYlH1HtM3nrz2IHrj/M7Fw5tXzjHwXwAAAABWUDggWgIAAHAPAJ0BKjwAPAA+hTSVR6UjIiE59OqooBCJbADG8Yf+5dYJrDwHDa7Sd995JsvtgPMB0APNr6kPn2vZUwDBig3wNIFMw8Rz3j0AP1VZ9EAsqy7/Na13sOtWGDKvg3z927BHUeklR7VFdIMkgYZryg+mda0huVbKUxeLeWezrWp/wyxWAAD++94SxGdmbXHzjQOlteL+xhPMfwU40n5Fr9kln1JgqxKXhro6NDAyu4wMfsQiIAIKravDThY0fPBaTpZ3G0+4/uDESTEW5r4MTbwqQycJcbV+NHRBc9/PYTOVY2B+h94YIbVngkwjWprpsNPmjnofE/60bRWezaaIecnYcjC7ERzHyvjPsq+1WPqd0Bq029xVJu5bT2xX/wfwHtyO/vfIOXKOrTb9mWPAM/lDgnQNDUXuAvNACY9fwOdR65beAaH19VObGzY8e1CSjIUPTrtwNsyfFQjhffqvVenLwjn+6zccovFEhl1EaayRbSVQiCIOANuaRF2aXvA5rSIKOFkp4k74KxwHyvWyf4wO8oMZgOavvDqhrE/j8nTN6gTPkQ+cYacyjhtsZIp4qepIOfcyVjtDkRQyZ4NFg/L20gGl5+qC9fGcRoo7tT9939AlqCuaEQ3jSlI1IJHmXRx+6ywxQYMZEWTOIU+2Cd+0WgvpWLPBSKJe1JUbEQzMI9iLEeeAO7k31oFrLGPC9FTO0L9zYJklv3FLa2PbQ/V0xiiJoHz4Kj37Dik25kNzvrmBA5vSksCCnraEEAPukIdn8kEHmYiB9haMHsmxDR63JVeRmR7/AAAA" />
+                    </li>
+                </ul>
+                <ul>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRrQEAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSJYAAAAN78EokiRF1zBzzPc+/zJbRkTkIDBouhGqfwaqMK40EWMhUjDFLKCLH9aeTqQYwJFk20pz8Lgr8RAn7rr/bQFD7jwV0f8kzvSaRdK+bdcPkvIcQald8y9E1S6awmZyzgao3NAfo8s1Wgg7HsI8f4E/NrrnqY5uP+07qF7hdRcYaH5DotV9ZqF4D0iWh1HFJO3vcUEMAABWUDgg+AMAANATAJ0BKjwAPAA+kUibSqWkoiGmGqpwsBIJbADJP72qf8BuhZ5q+3rV+4D1LemX5kv2U9aTpAP7t1FHoAdKrWma7zwY78ZUnAfSWTQvIk98/cD2TSZ5Uv3mCoGK8tS4NjAD4RIeOlTe6d7pCo5CxvvWkdAWVeiyJULCxf916FZx1sLdTlTS0NRretbphDgmxE0RN31/PKE5tPnJHMVoaVhU5Yv0Mu5IAPa//Kv9Oe049/EJEC13lpBwt02QzC+yZ0o/LV3ltRoMW4W2b88wgWXMwBE1NeA40TRcTIzJhkcIz/mdCTqhuvZl5xF6zGVixXvhP6fIWiCehsLafwK86jwk242cG6e8ocMB74quxXhnFXuYrWiSavO7leUFgxOJ1O5PnzI7QcYTLMasqBwb+Tf7H8FqRypOjfJ4FU/XhLoMNOjkKK++7G8zVATrhcPii1mbTelGqwl8DzruDLqvWWBpEAGBQxAz7vtujPHcjDVqel4rKoEdHsYkh+iXWlmcqHR97qcuSqMRv9WJ+oo63Trf3fWqAc6lvQWVYK0rDHP2dJ37s8ZD6QSG/6oP5delvlIFkzNxz/H/XWVcSLeNBU2u0hUX3KYdiSJbJ7IgoYoBbHmle9lW5u+t+KHw2GdpupnTjdaiks74BvHJOv7Y4iEyfgZExOWcL5LTXmLwlMkgKg6GpJP+hTbkHmGn8K5IOCoiOO/bjIaQN7AHDatxSyRznEhXsXF2fUurmLpu61wBuOWo3aGddyTDN5MmB+Hi6O6fiDNLsejqQNnvvp5t+Tq2ZPf4vc/EIz8hzbamMgxwSjaY1kW3ofl3/ke4jJ/DKZ2PAdLXwD5HGxM57oNhqQGMi4sgW8TAZyU/L9sJxwLMdY5AdnVAaPpZiIZ4wT/6HnKGxS8mWlyW1pF9alWe1gO8nN1pnCWKfebUA2Q3xknB/AquGLyimoAK6VLReKXMMU9Pb5pLt7/a2Kv6Qy/P+AQkOOOJFq9rIvYAMlmvDyOUvTilUTa2DA1Mtw8nwjXcpuZF+utwG6tSmQ3jM6om6l2XaIpKhpIMjTuDnfpg/8ZCHicxVgoOo+JNT61GG2aPqFPE4csXY7nA5Vrt1dYS0EYoMvS/sUPPnrZTa/nK/p/zIiD1NzKF0M1VuZy017nbZ6/zO53+V0aiHBMXtRoD643p5iKWLLXR1+GHxP9P3fwzmuT7hdfMRX9scejomHbYEWH9k1XQX97FJTmLsjMb3+HfLRfp4oiVYVDXO6zmDgJWuXeyjlllDS11m14TxB1JHw9QZLDIRxbgowXqLfkkBSZSG8OYETnGlasMeyPgrzFmpE7/uP1Q8HjLjflu9QRnTVEsbvVAAAAA"  />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,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" />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRu4EAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSOsAAAANd8GgbSRHN/Ubt+cPZ2BERB50TFUP1OcQD6b9GvaA8SfCqxp2gCVJtmmrj23bxvyHd/W01/+LiP4nPkTFcTVZAItzm5t2PfCV1wMbzARZc42unC58iJ4PxlJiVfWBlxiqN5ib8VIcePCeCgJOiZb6gu7fIFHiahIDEHGmVSo2yJLOAZ1kuCB0NRBqMghlAYQC/mU4BdCdmwy6bdZANzcu6JrWkEC1j2uXgCoVj9IyOVDcQ4/HVMUKKNaMx+Oql0jhwPpecxGvo1hiE6yHTMTHUVdWIoHlnvY8vlxT2RmuJgtgcW5zM4r4AAAAAFZQOCDcAwAAkBQAnQEqPAA8AD6RRJlJpaQiISgb+1CwEglsAMEQWrhPoH4yflH8qlh/o+v2GP64/1vSA8wD9T/1O6wHmA/aH9juxV6AH83/zvWH+gf5Yf7sfCR+6f7Ie11mED8V2VpoKu2aR5QszHfAP1uYS6ve7IPPsOsSUTBlB78U5/vfjziPEJtsCnNb1h9UjU/hc0dlzyRqVt13yh6FBTzyZC5Mi9JLv25m9UZCxYot8VQA/vA3ksXbSGmODrxDhaAZXIqlldBYe4Ksx8quS3SqHTiCKf/oafOP1+ZFTP28Nn/+tHuliRMtQpflCnyNQ2O82iRkQKEwCEfY3aoMT8MxIJJ/gy4jwENKJHybx83qmkOhT++BPizY8638LbnRkbHB+FgU+81NYyLfdgGre+CDYiHue81n5hO+93SflCIDb2k5yJPCfg4+Gujqky1e9YTYUVZ15h/IO1t+LIDK/eIHHMO7CGcr+J+3LdNfwSbhmMydtnZKpI0/fS4+vJS81CS2uelLK4NQJNntcafxcKBMgfd9yPawp6/dfWUrlUbMUL7Y8W0uJW1dCvzKWfVILMUopXhQxOvRY9DMjwAcQrcaoyCFwrwqSAPHPo6GyUc9tOA3yMGLOqvGujy8mGCXYsu2b26F4NitjdF5iPqsqPwHlaqPyjsvHFsVsDxF1t4LxFtrnLgARpNEuoR8kl3qU8a9urN5Hlr9HAzzbrFHGHLiPGJULaGBnA415r2II3B4jAMNQu9/OrjZuDnhnnAaof3PoL/MK95NIrg27TIFJBZoAwXk9nYJod/R1lTzXKhRgjFEnG5u6l4MQOQy7z3dKLH1szQHv4GckCEzGvsmBf3SE/tCV9yB764SqzQ2roMUTp5QonP0uhRc6Z70IFvv3rBLCegOvGcg8PIaOYUn4nTpEWw1wptmy7iPv/aNqVoi4hcI+kPrPFsqQ3f9GdoAmrjZ4XMAmO0ma1hrM0mcmyL9VVfr35p0LU6HbQU7/uRgAz/agby1GYsM4hERuv+sifai+c6K2YWqFLt2O6adfmhZDti1SCZXfx3vvXRKmo6T8c9vAbgrzcA72cbrfeB74N/s33/C3mdnlXjHbKIpTFKwRiLkY+h5TAMQarq5xYyiY45x7p5oLga72IhLaiJnoREHSbBd9yQEEU+VcpWKzJKnuaWzrYKWlYuureOjcf58pAEy5QKzoUzvs2xMAgEl9YbcGxAIYXoXIqwL/kq1TY/5a0OTEj+ZEQlMCFp3zfpKBZjP2kmUxRofFkLCw0tM8FbA1G4j2HIP/LeDryTL20npos3tks9Nyys0nMoKrkYAAA==" />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRqQDAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSPUAAAANP8IwkiQlNO5O/qm+kUNEZOU3y2ej0cijtFv12k/4Wv0epElqtM2pFma1BFeSbZvOfn6xbdu6cZ7nP6MY9/ynIvqfeCiRfCkd0sHHOK4m872FF18z7oKfHkoXAtv+BQ8p0bbBWYxVUl3m4JZoeeAv52o9hqu/7YFCSNa7Z6Vhg0bIpgaRBKjkKsu7IIsGy6ATiykQpsIgDGsg1PBXxdRAZx7CoDusU6Bbj4siqNzpPBgF1e60Z1UZNPZItQaprAAKb7HC9dytJwXw9zZD3FmvnpXB214MJdwd1slUoiJ4urvREi+XPgsWMiENfMzjcnZS8QAAAABWUDggiAIAALAOAJ0BKjwAPAA+kTqZSKWjIqEqFm3IsBIJbAC/cex4AdjF0ntn4jfkB05XAOIDwz0AbZrzAebX6AN4U3j7+9sEDSBTQPH0+IFspyuO/2ZK4XPUzO6+339kMZIaBJUS5UgmlcUTBuV6UwzSj/w5LCaKd+mbcGZNd6VLdCt7IAD+/HZeMGsdWiNDdKJN0b/BtAHTNRITSE631R03AH/XQiwkylEIoEP+rn1doZJLPLeH+GHgh84VRfZxbdZiDAVr01Vd7nMtYUbu+7H3mcDMZkPvQ0+rqaYJ84/Z7XSGrYuxscTlhehX5Bz9Z+z+HrwzHmbgmdYw4KvURAh0nwfqTArl2/xEqQ/tdybFE8YLmMJpM81z4paFU9q5BiTFPNNhFhQ89joA4E9417j3KJv7R/CBw26TCBwwV9vKno5mW83nd8fT1jtulm2h116lSCXj89/ydD8/jRdaeH//eLA3waFSgUhwLz1bCzzwdYWMY4nwO5NoWREdQen5KIYOuexulT2mHgFKWGOnM9O/0nkWg2beGv8wW3T0hYIMh58y0gj8wI3bo1IdpgvBdzOCFrLxzS+TUjrOm890AOo8i7sZVOt7xQk3iEenBp0PbHWKn57OmALerOwD3Am5pn2L9K2KZH6qlD2/2voadVV7gr1Kq4FFSomulzZAVdp+VqtgLqB2HYbdcSoiCVSCI8J6Niequyk0mXyquvW96CyFOvdW4Cj0WEO32+0Ym73apRFsN9/I/F19f8hHpAdTBejxwoPXzKPav/1l1Ct0UXYgpQ0/gbohhREZb3/ak0EPpRKpTPIAjJNt0otORYk06G72M4eJ5/HGOJgXQexc98ZI40Q+iABnip/BlAAAAA==" />
+                    </li>
+                    <li>
+                        <img src="data:image/webp;base64,UklGRvgDAABXRUJQVlA4WAoAAAAQAAAAOwAAOwAAQUxQSDUBAAANr8MgkiQnzOyRveBf3gdAQ0TkQpeXvEVaRMI7tBQ97LRdxGJuz51KIWmshL+N1yEir9CLCWi3bZtudmzbtmrFdWMnteJa/99653PHiOh/4hNLqAuE7G45/n59eNxsnd++4DtfPPoEZiROe1BZK3Yf8UUSnwWTLOuiqVgY4ZM0aQXT7tVBvo930ZoAzGvnePkJ3hJWUMiWh9sP8CVAo8iUGsIwqMyeom4GZCtlP+g0jigIY24QOlwg1EtByH1mg+4F/0LZIGTdikH3cOQA3eDABbqTahh05ZbGBKqr3kUhBap1+V3FaAfNoMJ66RTTalDcZoV4fdoZLMnA/M0GH+/TPG9BBaZvNkf41M+PkzYwe5bj4Mtwt+ydN4C54VZNhG/u23s9S8RmEODv95en9X05G58AAAAAVlA4IJwCAABwDwCdASo8ADwAPn00kkekoyGhO/ScAJAPiWwAvzW0/t3ToPO6x+PX46dTNvlF2e9tn+oDbAeYv9gP2A95H0J7xj6EHlt+yiRJvkf74B+kB6HQAGSzIE2j6qRBgcrzGNlxZLDjsppG8OfdCy8htFfjWVXhdScQwC3crM70VG19oPTMzAAA/v5fdRTkSBvP5S6Gv7qev4L/+9H/BzvQHucs4ElXPfAWeWxNOfZFp8Sjw/3K6WzpnSrPn6z/+dq+wriKxr7zxGAUK4s3MkPz6ffewK7wfGzEl6XIJE+CzOY9eoghiABsqqa8DBh3w+ORis+VCrB40yM5iwn53dsL4H5nKb04/3Dn4fok9BOgJjl+1miHdurOFFGLOGBfsXpjz5jvySuGX//g3fyblEQUxGR3fT8jRAK/kfe0ivtrbzUR8kPw/BHzTd0oev7rUr2PBeHLkr4SjFsxNkh0DR93omBEScJLzHQvAS/9sycf4j0+Yin2WqHve8ggOT+Nx3I/5b782+jCOGPKGbck2exBZ8hqifI48/8kh7pQO2iyORtcRxRZYGMP5/4fzhOKojjX2movzEAWZ0Ml2yafWH31e8lezJuR0WVRRyUl1wbKiYVk6E/8R6aXgT4Ek6+Oco73rxxLNo4fI+KgCNEb4wzebWIBWxaVMq3ydedmk9qC0NSiFvhCxWdzL/iqEN13fDwdlj1/Bj33hSM3OJCI5IHlLL83s8bz7hGTd/Slz4B/ivYdgkPP0AXcUbhVS8EYZ9+WTP8rZ5AZV2kVWbpI+mszyz/nUbWBfyuXdutpqPRUPUDpc/6WcTyw/Q26670NaS+YrYbNcPcgi68IKIx25s/ARZT+RDhALKqpnSt7BEHv7MVp6nW5fVI7UdR+m5ToAA==" />
+                    </li>
+                </ul>
+            </div>
+            <div class="J-r-title">
+                <strong>淘宝头条</strong>
+                <a href="#"><span>更多 ></span></a>
+            </div>
+            <div class="J-r-title-con">
+                <img src="https://img.alicdn.com/imgextra/i2/2973040405/TB2VIataR0kpuFjy1XaXXaFkVXa_!!2973040405-0-beehive-scenes.jpg_60x60.jpg_.webp" alt="news" />
+                <div>
+                    <strong>国外PC能耗标准出台</strong><br />
+                    <p>「由搞机汇供稿，喜欢的朋友可点击右上角的订阅按钮」对于电脑等数码</p>
+                </div>
+            </div>
+            <div class="J-r-title2">
+                <strong>有好货</strong>
+            </div>
+            <div class="J-r-title2-con">
+                <a href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB1jyztGpXXXXbKXVXXXXXXXXXX_100x100q90_.webp" alt="a"  />
+                    <div>
+                        <strong>New Balance</strong>
+                        <p>
+                            除了早前的 998，于这个冬季，运动品牌 New Balance 的
+                        </p>
+                        <span>579 人说好</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB23JcQsXXXXXcpXpXXXXXXXXXX_!!0-dgshop.jpg_100x100q90_.webp" alt="a"  />
+                    <div>
+                        <strong>【豪必入】Nike Air</strong>
+                        <p>
+                            此款Nike Air Yeezy2 Red以纯红配色呈现出热情洋溢的氛围
+                        </p>
+                        <span>160 人说好</span>
+                    </div>
+                </a>
+                <a href="#">
+                    <img src="https://img.alicdn.com/tfscom/TB2t.lMjpXXXXXxXpXXXXXXXXXX_!!107636016-0-dgshop.jpg_100x100q90_.webp" alt="a"  />
+                    <div>
+                        <strong>BEANPOLE春季男士皮</strong>
+                        <p>
+                            BEANPOLE，于1989年在韩国创立的时尚休闲品牌。此款春季新品
+                        </p>
+                        <span>767 人说好</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="nothing">
+        </div>
+        <div class="J-seat-bottom">
+            <div class="J-seat-helper">
+                <img src="./images/security.png"/>
+                <strong>消费者保障</strong>
+                <span>保障范围 </span>
+                <span>退货退款服务 </span>
+                <span>服务中心 </span>
+                <span>更多特色服务 </span>
+            </div>
+            <div class="J-seat-helper">
+                <img src="./images/help.png"/>
+                <strong>新手上路</strong>
+                <span>新手专区 </span>
+                <span>消费警示 </span>
+                <span>交易安全 </span>
+                <span>24小时在线帮助 </span>
+            </div>
+            <div class="J-seat-helper">
+                <img src="./images/dollar.png"/>
+                <strong>付款方式</strong>
+                <span>快捷支付 </span>
+                <span>信用卡 </span>
+                <span>余额宝 </span>
+                <span>蚂蚁花呗 </span>
+            </div>
+            <div class="J-seat-helper">
+                <img src="./images/agriculture.png"/>
+                <strong>淘宝特色</strong>
+                <span>手机淘宝 </span>
+                <span>旺信 </span>
+                <span>大众评审 </span>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <div class="footer-nets">
+            <p>
+                <span><a href="http://www.alibabagroup.com/cn/global/home">阿里巴巴集团</a></span><b>|</b>
+                <span><a href="//www.taobao.com">淘宝网</a></span><b>|</b>
+                <span><a href="//www.tmall.com">天猫</a></span><b>|</b>
+                <span><a href="//ju.taobao.com">聚划算</a></span><b>|</b>
+                <span><a href="http://www.aliexpress.com">全球速卖通</a></span><b>|</b>
+                <span><a href="http://www.alibaba.com/">阿里巴巴国际交易市场</a></span><b>|</b>
+                <span><a href="http://www.1688.com">1688</a></span><b>|</b>
+                <span><a href="http://www.alimama.com">阿里妈妈</a></span><b>|</b>
+                <span><a href="http://www.fliggy.com/">飞猪</a></span><b>|</b>
+                <span><a href="http://www.aliyun.com">阿里云计算</a></span><b>|</b>
+                <span><a href="http://www.yunos.com">YunOS</a></span><b>|</b>
+                <span><a href="http://www.aliqin.cn/">阿里通信</a></span><b>|</b>
+                <span><a href="http://www.etao.com/">一淘</a></span><b>|</b>
+                <span><a href="http://www.net.cn">万网</a></span><b>|</b>
+                <span><a href="http://www.autonavi.com/">高德</a></span><b>|</b>
+                <span><a href="http://www.uc.cn/">UC</a></span><b>|</b>
+                <span><a href="http://www.umeng.com/">友盟</a></span><br>
+                <span><a href="http://www.xiami.com">虾米</a></span><b>|</b>
+                <span><a href="http://www.alibabaplanet.com/">阿里星球</a></span><b>|</b>
+                <span><a href="http://www.laiwang.com/">来往</a></span><b>|</b>
+                <span><a href="http://www.dingtalk.com/?lwfrom=20150130160830727">钉钉</a></span><b>|</b>
+                <span><a href="https://www.alipay.com">支付宝</a></span><b>|</b>
+                <span><a href="http://www.youku.com/">优酷</a></span><b>|</b>
+                <span><a href="http://www.tudou.com/">土豆</a></span><b>|</b>
+                <span><a href="http://www.alihealth.cn/">阿里健康</a></span><b>|</b>
+                <span><a href="http://www.alibabapictures.com/simp/0-home.html">阿里影业</a></span><b>|</b>
+                <span><a href="http://www.alisports.com/cn/">阿里体育</a></span><b>|</b>
+                <span><a href="https://www.mybank.cn/">网商银行</a></span>
+            </p>
+        </div>
+        <div class="footer-info">
+            <p>
+                <span><a href="//www.taobao.com/about">关于淘宝</a></span>
+                <span><a href="//www.taobao.com/about/partners.php">合作伙伴</a></span>
+                <span><a href="//pro.taobao.com">营销中心</a></span>
+                <span><a href="http://jubao.alibaba.com/internet/readme.htm?site=taobao">廉正举报</a></span>
+                <span><a href="//service.taobao.com/support/main/service_route.htm">联系客服</a></span>
+                <span><a href="//open.taobao.com">开放平台</a></span>
+                <span><a href="//www.taobao.com/about/join.php">诚征英才</a></span>
+                <span><a href="//consumerservice.taobao.com/contact-us">联系我们</a></span>
+                <span><a href="//www.taobao.com/sitemap.php">网站地图</a></span>
+                <span><a href="//www.taobao.com/go/chn/tb-fp/2014/law.php">法律声明及隐私权政策</a></span>
+                <span><a href="http://ipp.alibabagroup.com/">知识产权</a></span><b>|</b>
+                <em>© 2003-2016 Taobao.com 版权所有</em>
+            </p>
+            <p>
+                <span>网络文化经营许可证：<a href="//img.alicdn.com/tps/i2/TB1YFcPLpXXXXaiXFXXcaDpFFXX-803-473.png">浙网文[2013]0268-027号</a></span><b>|</b>
+                <span>增值电信业务经营许可证：<a href="http://zcainfo.miitbeian.gov.cn/state/outPortal/loginPortal.action">浙B2-20080224</a></span><b>|</b>
+                <span>信息网络传播视听节目许可证：1109364号</span><b>|</b><span>互联网违法和不良信息举报电话:0571-81683755 blxx@list.alibaba-inc.com</span>
+            </p>
+        </div>
+    </footer>
+</body>
+
+</html>
