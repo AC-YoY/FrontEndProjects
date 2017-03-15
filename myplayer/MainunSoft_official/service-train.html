@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <!-- 什么版本的ie就用什么版本的标准模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1">
+        <meta name="viewport" content="width=device-width,
+                                     initial-scale=1.0,
+                                     maximum-scale=1.0,
+                                     user-scalable=no">
+        <title>业务培训</title>
+        <link rel="stylesheet" href="css\demo.css">
+    </head>
+    <body>
+        <nav>
+            <img onClick="location='/index'" class="vertical-center" src="imgs/logo.png" alt="logo"/>
+            <div class="nav-items">
+                <ul>
+                    <li>
+                        <div class="pointer">
+                            <span>脉点</span>
+                        </div>
+                        <div class="menu-mask hide">
+                            <div class="menu-left">
+                                <ul>
+                                    <li onClick="location='./cooperation0'">合作动态</li>
+                                    <li onClick="location='./cooperation1'">行业风向</li>
+                                    <li onClick="location='./cooperation2'">业务洞察</li>
+                                </ul>
+                            </div>
+                            <div class="menu-right">
+                                <div class="menu-div vertical-center">
+                                    <div class="menu-0 hide">
+                                        <b>与悉云科技签订战略合作协议1</b>
+                                        <div class="menu-img"></div>
+                                        <div class="menu-article">
+                                            <span>
+                                                本协议双方遵循互惠互利合作理念，以促惠上为目的，依托国资系统合作平台，本着“发挥优势、相互促进、长期合作、互利互赢”的原则推进战略合作，努力扩大双方合作的深度和广度，提高双方经济效益，实现互利共赢。
+                                            </span>
+                                            <a href="/cooperation0">更多</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-1 hide">
+                                        <b>与悉云科技签订战略合作协议2</b>
+                                        <div class="menu-img"></div>
+                                        <div class="menu-article">
+                                            <span>
+                                                本协议双方遵循互惠互利合作理念，以促惠上为目的，依托国资系统合作平台，本着“发挥优势、相互促进、长期合作、互利互赢”的原则推进战略合作，努力扩大双方合作的深度和广度，提高双方经济效益，实现互利共赢。
+                                            </span>
+                                            <a href="/cooperation1">更多</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-2 hide">
+                                        <b>与悉云科技签订战略合作协议3</b>
+                                        <div class="menu-img"></div>
+                                        <div class="menu-article">
+                                            <span>
+                                                本协议双方遵循互惠互利合作理念，以促惠上为目的，依托国资系统合作平台，本着“发挥优势、相互促进、长期合作、互利互赢”的原则推进战略合作，努力扩大双方合作的深度和广度，提高双方经济效益，实现互利共赢。
+                                            </span>
+                                            <a href="/cooperation2">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </li><!--
+                 --><li>
+                        <div class="pointer">
+                            <span>服务</span>
+                        </div>
+                        <div class="menu-mask hide">
+                            <div class="menu-left">
+                                <ul>
+                                    <li onClick="location='/service-consult'">咨询</li>
+                                    <li onClick="location='/service-dev'">开发</li>
+                                    <li onClick="location='/service-maintenance'">运维</li>
+                                    <li onClick="location='/service-train'">培训</li>
+                                </ul>
+                            </div>
+                            <div class="menu-right">
+                                <div class="menu-ul vertical-center">
+                                    <ul class="menu-0 hide">
+                                        <li data-href="/service-consult">内容管理系统规划</li>
+                                        <li data-href="/service-consult">协同设计系统规划</li>
+                                        <li data-href="/service-consult">项目文档系统规划</li>
+                                        <li data-href="/service-consult">知识管理体系规划</li>
+                                        <li data-href="/service-consult">信息安全体系规划</li>
+                                        <li data-href="/service-consult">协同教学平台规划</li>
+                                    </ul>
+                                    <ul class="menu-1 hide">
+                                        <li data-href="/service-dev">内容管理系统开发</li>
+                                        <li data-href="/service-dev">协同设计系统开发</li>
+                                        <li data-href="/service-dev">项目文档系统开发</li>
+                                        <li data-href="/service-dev">知识管理体系开发</li>
+                                        <li data-href="/service-dev">信息安全体系开发</li>
+                                        <li data-href="/service-dev">协同教学平台开发</li>
+                                    </ul>
+                                    <ul class="menu-2 hide">
+                                        <li data-href="/service-maintenance">内容管理系统运维</li>
+                                        <li data-href="/service-maintenance">协同设计系统运维</li>
+                                        <li data-href="/service-maintenance">项目文档系统运维</li>
+                                        <li data-href="/service-maintenance">知识管理体系运维</li>
+                                        <li data-href="/service-maintenance">信息安全体系运维</li>
+                                        <li data-href="/service-maintenance">协同教学平台运维</li>
+                                    </ul>
+                                    <ul class="menu-3 hide">
+                                        <li data-href="/service-train">内容管理系统培训</li>
+                                        <li data-href="/service-train">协同设计系统培训</li>
+                                        <li data-href="/service-train">项目文档系统培训</li>
+                                        <li data-href="/service-train">知识管理体系培训</li>
+                                        <li data-href="/service-train">信息安全体系培训</li>
+                                        <li data-href="/service-train">协同教学平台培训</li>
+                                    </ul>
+                                </div>
+                                <div class="nav-4-empty-block hide"></div>
+                                <div class="menu-content vertical-center">
+                                    <div class="menu-0-0 hide">
+                                        <b>与犀云签订战略合作协议 1-0-0</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-0-1 hide">
+                                        <b>与犀云签订战略合作协议 1-0-1</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-0-2 hide">
+                                        <b>与犀云签订战略合作协议 1-0-2</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-0-3 hide">
+                                        <b>与犀云签订战略合作协议 1-0-3</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-0-4 hide">
+                                        <b>与犀云签订战略合作协议 1-0-4</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-0-5 hide">
+                                        <b>与犀云签订战略合作协议 1-0-5</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-1-0 hide">
+                                        <b>与犀云签订战略合作协议 1-1-0</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-1-1 hide">
+                                        <b>与犀云签订战略合作协议 1-1-1</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-1-2 hide">
+                                        <b>与犀云签订战略合作协议 1-1-2</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-1-3 hide">
+                                        <b>与犀云签订战略合作协议 1-1-3</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-1-4 hide">
+                                        <b>与犀云签订战略合作协议 1-1-4</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-1-5 hide">
+                                        <b>与犀云签订战略合作协议 1-1-5</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-2-0 hide">
+                                        <b>与犀云签订战略合作协议 1-2-0</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-2-1 hide">
+                                        <b>与犀云签订战略合作协议 1-2-1</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-2-2 hide">
+                                        <b>与犀云签订战略合作协议 1-2-2</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-2-3 hide">
+                                        <b>与犀云签订战略合作协议 1-2-3</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-2-4 hide">
+                                        <b>与犀云签订战略合作协议 1-2-4</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-2-5 hide">
+                                        <b>与犀云签订战略合作协议 1-2-5</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-3-0 hide">
+                                        <b>与犀云签订战略合作协议 1-3-0</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-3-1 hide">
+                                        <b>与犀云签订战略合作协议 1-3-1</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-3-2 hide">
+                                        <b>与犀云签订战略合作协议 1-3-2</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-3-3 hide">
+                                        <b>与犀云签订战略合作协议 1-3-3</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-3-4 hide">
+                                        <b>与犀云签订战略合作协议 1-3-4</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                    <div class="menu-3-5 hide">
+                                        <b>与犀云签订战略合作协议 1-3-5</b><br />
+                                        <p>
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                            云科技签订战略合作协议与犀云签订战略合作协议，
+                                        </p>
+                                        <a href="./intro.html">更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!--
+                 --><li>
+                        <div class="pointer">
+                            <span>客户</span>
+                        </div>
+                        <div class="menu-mask hide">
+                            <div class="menu-left">
+                                <ul>
+                                    <li onClick="location='/customer-finance'">金融</li>
+                                    <li onClick="location='/customer-edu">教育</li>
+                                    <li onClick="location='/customer-consult'">咨询</li>
+                                    <li onClick="location='/customer-engineering'">工程</li>
+                                </ul>
+                            </div>
+                            <div class="menu-right">
+                                <div class="menu-div vertical-center">
+                                    <div class="menu-0 hide">
+                                        <b>与悉云科技签订战略合作协议1</b>
+                                        <div class="menu-img"></div>
+                                        <div class="menu-article">
+                                            <span>
+                                                本协议双方遵循互惠互利合作理念，以促惠上为目的，依托国资系统合作平台，本着“发挥优势、相互促进、长期合作、互利互赢”的原则推进战略合作，努力扩大双方合作的深度和广度，提高双方经济效益，实现互利共赢。
+                                            </span>
+                                            <a href="/customer-finance">更多</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-1 hide">
+                                        <b>与悉云科技签订战略合作协议2</b>
+                                        <div class="menu-img"></div>
+                                        <div class="menu-article">
+                                            <span>
+                                                本协议双方遵循互惠互利合作理念，以促惠上为目的，依托国资系统合作平台，本着“发挥优势、相互促进、长期合作、互利互赢”的原则推进战略合作，努力扩大双方合作的深度和广度，提高双方经济效益，实现互利共赢。
+                                            </span>
+                                            <a href="/customer-edu">更多</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-2 hide">
+                                        <b>与悉云科技签订战略合作协议3</b>
+                                        <div class="menu-img"></div>
+                                        <div class="menu-article">
+                                            <span>
+                                                本协议双方遵循互惠互利合作理念，以促惠上为目的，依托国资系统合作平台，本着“发挥优势、相互促进、长期合作、互利互赢”的原则推进战略合作，努力扩大双方合作的深度和广度，提高双方经济效益，实现互利共赢。
+                                            </span>
+                                            <a href="/customer-consult">更多</a>
+                                        </div>
+                                    </div>
+                                    <div class="menu-3 hide">
+                                        <b>与悉云科技签订战略合作协议4</b>
+                                        <div class="menu-img"></div>
+                                        <div class="menu-article">
+                                            <span>
+                                                本协议双方遵循互惠互利合作理念，以促惠上为目的，依托国资系统合作平台，本着“发挥优势、相互促进、长期合作、互利互赢”的原则推进战略合作，努力扩大双方合作的深度和广度，提高双方经济效益，实现互利共赢。
+                                            </span>
+                                            <a href="/customer-engineering">更多</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!--
+                 --><li>
+                        <div class="pointer">
+                            <span>招聘</span>
+                        </div>
+                        <div class="menu-mask hide">
+                            <div class="menu-left">
+                                <ul>
+                                    <li onclick="location='/employ-school'">校园招聘</li>
+                                    <li onclick="location='/employ-social'">社会招聘</li>
+                                </ul>
+                            </div>
+                            <div class="menu-right">
+                                <div class="menu-ul menu-ul-2">
+                                    <ul class="menu-0 hide">
+                                        <li data-href="/employ-school">校园宣讲</li>
+                                        <li data-href="/employ-school">实习招聘</li>
+                                        <li data-href="/employ-school">应届生招聘</li>
+                                    </ul>
+                                    <ul class="menu-1 hide">
+                                        <li data-href="/employ-social">业务招聘</li>
+                                        <li data-href="/employ-social">技术招聘</li>
+                                        <li data-href="/employ-social">职能招聘</li>
+                                        <li data-href="/employ-social">管理招聘</li>
+                                        <li data-href="/employ-social">市场招聘</li>
+                                    </ul>
+                                </div>
+                                <div class="nav-4-empty-block hide"></div>
+                                <div class="menu-content vertical-center">
+                                    <div class="menu-0-0 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            0-0
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-0-1 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            0-1
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-0-2 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            0-2
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-0-3 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            0-3
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-0-4 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            0-4
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-1-0 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            1-0
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-1-1 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            1-1
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-1-2 hide">
+                                        <b>与犀云签订战略合作协议 3-1-2</b><br />
+                                        <p>
+                                            1-2
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-1-3 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            1-3
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                    <div class="menu-1-4 hide">
+                                        <b>任职要求</b><br />
+                                        <p>
+                                            1-4
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                            html5，c语言，html5，c语言
+                                        </p>
+                                        <a href="#">更多</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li><!--
+                 --><li>
+                        <div class="pointer">
+                            <span>关于</span>
+                        </div>
+                        <div class="menu-mask hide">
+                            <div class="menu-left">
+                                <ul>
+                                    <li onclick="location='/about'">公司简介</li>
+                                    <li onclick="location='/about1'">服务网络</li>
+                                    <li onclick="location='/about2'">合作伙伴</li>
+                                    <li onclick="location='/about3'">企业文化</li>
+                                </ul>
+                            </div>
+                            <div class="menu-right">
+                                <div class="menu-about vertical-center">
+                                    <div class="menu-0 hide">
+                                        <b>脉云软件（上海）有限公司</b>
+                                        <span>
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                        </span>
+                                        <a href="/about">更多</a>
+                                    </div>
+                                    <div class="menu-1 hide">
+                                        <b>脉云软件（上海）有限公司</b>
+                                        <span>
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                        </span>
+                                        <a href="/about1">更多</a>
+                                    </div>
+                                    <div class="menu-2 hide">
+                                        <b>脉云软件（上海）有限公司</b>
+                                        <span>
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                        </span>
+                                        <a href="/about2">更多</a>
+                                    </div>
+                                    <div class="menu-3 hide">
+                                        <b>脉云软件（上海）有限公司</b>
+                                        <span>
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                            脉云软件作为一家各个方面
+                                        </span>
+                                        <a href="/about3">更多</a>
+                                    </div>
+                                </div>
+                            </div><!-- menu-right ends -->
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="nav-menu vertical-center">
+                <input class="search-input" type="text" placeholder="搜索"/>
+                <button class="search-btn"></button>
+                <a class="search-a" href="#"><img class="icon-menu" src="imgs/menu.png" alt="menu"/></a>
+            </div>
+        </nav>
+
+        <div class="banner-div banner-4">
+            <div class="banner-content-4 vertical-center">
+                    业务培训
+            </div>
+            <div class="banner-mask-4 vertical-center">
+
+            </div>
+        </div>
+
+        <div class="bg-color-3">
+            <div class="connection">
+                <span>联系电话： 400-9910-540</span>
+                <span>企业邮箱： service@maiunsoft.com</span>
+                <span>企业QQ： service@maiunsoft.com</span>
+            </div>
+        </div>
+
+        <!-- <div class="template-big-card">
+            <img class="big-card-img" src="./imgs/ceil-img-1.png" >
+            <div class="big-card-content">
+                <h3>公司简介</h3>
+                <p>
+                    oogle 和 Uber 互掴了几个巴掌，或许会成为引发无人驾驶领域大战的火药桶。
+　　2 月 24 日，Google 母公司 Alphabet 旗下的自动驾驶技术公司 Waymo 指控 Uber 及其旗下的自动驾驶卡车公司 Otto 盗取了他们的自动驾驶技术。
+　　指控称其自动驾驶汽车部门软件工程师 Anthony Levandowski 在离开谷歌创立自动驾驶卡车公司 Otto 之前，秘密下载了 14000 份专有技术文件。
+　　Uber 的发言人则称 Waymo 的诉讼毫无根据，其目的只是想阻止竞争对手前进。3 月 1 日，Uber 去年收购无人车公司 Tyto 的交易被披露，这家公司为 Uebr 提供的一项自动驾驶技术专利或能反击 Google 窃密指控。但如果Waymo 可以证明 Levandowski 的盗窃行为，以及这种盗窃行为对 Waymo 造成了巨大的损失，那么 Uber 将会面临高额罚金。更为严重的是，此次诉讼很可能会挫败 Uber 开发无人驾驶汽车的计划，从而给 Uber 的未来蒙上一层阴影。
+　　诉讼的背后，则指向了无人驾驶技术领域的混战。
+                </p>
+            </div>
+        </div> -->
+        <div class="bg-color-5">
+            <div class="template-wrap">
+
+        <div class="template-ceil">
+            <b>业务培训介绍</b>
+            <div class="template-ceil-img" src="./imgs/ceil-img-1.png" alt="content-intro" >
+
+            </div>
+            <p>
+                Google 和 Uber 互掴了几个巴掌，或许会成为引发无人驾驶领域大战的火药桶。
+                2 月 24 日，Google 母公司 Alphabet 旗下的自动驾驶技术公司 Waymo 指控 Uber 及其旗下的自动驾驶卡车公司 Otto 盗取了他们的自动驾驶技术。
+                指控称其自动驾驶汽车部门软件工程师 Anthony Levandowski 在离开谷歌创立自动驾驶卡车公司 Otto 之前，秘密下载了 14000 份专有技术文件。
+                Uber 的发言人则称 Waymo 的诉讼毫无根据，其目的只是想阻止竞争对手前进。3 月 1 日，Uber 去年收购无人车公司 Tyto 的交易被披露，这家公司为 Uebr 提供的一项自动驾驶技术专利或能反击 Google 窃密指控。但如果Waymo 可以证明 Levandowski 的盗窃行为，以及这种盗窃行为对 Waymo 造成了巨大的损失，那么 Uber 将会面临高额罚金。更为严重的是，此次诉讼很可能会挫败 Uber 开发无人驾驶汽车的计划，从而给 Uber 的未来蒙上一层阴影。
+                诉讼的背后，则指向了无人驾驶技术领域的混战。
+                商业应用尚未成熟 专利争夺大战已经打响
+                Google 算是无人驾驶领域的先行者， 其无人驾驶汽车项目开始于 2009 年，启动了一个数十亿美元的比赛作为孵化器，以完善无人驾驶技术。在此过程中，它帮助 Google 收集了成百上千项专利，涵盖自动化车辆的软件，硬件和道路行为等各个方面。
+                Google 从来没有透露自己在无人驾驶汽车上投入了多少，在 2012 年，Google 的无人车的自动驾驶套件成本就已经超过了 25 万美元，整车成本超 30 万美元，远超法拉利。
+                硬件成本如此之高，为了使量产成为可能，Google 在无人驾驶汽车的研发和人才的投入必须大手笔。据彭博社报道，Google 针对早期无人车团队员工制定过非常慷慨的薪酬制度。尽管没有透露具体数字，但是熟悉此事的员工说，这笔钱多到可以让他们想干嘛就干嘛。
+                此外无人车团队员工还能获得额外的期权和现金奖励， Google 按照项目价值为这些员工已获得的奖励设立一个倍数，两者相乘后发给员工。2015 年下半年 Google 还大幅提升奖金倍数，使得奖金数达到数百万美元。有员工被授予 16 倍奖金倍数。
+                2015 年第四季度，Google 运营费用增加 14% 达到 66 亿美元。首席财务官 Ruth Porat 称增长的原因是研发支出大增。尽管她没有具体指是什么项目，但 Google 内部人士表示说的正是汽车项目。
+                在与 Uber 的诉讼中，Waymo 也称为了将无人车引入大众市场，Waymo 已经投资了数百万美元和数万小时的工程时间来定制在业界中最先进的， 有效的激光雷达传感器，以期将整套系统出售给汽车制造商，而不是只解决自动驾驶解决方案中的一个环节。
+            </p>
+            <div style="clear:both;"></div>
+        </div>
+    </div></div>
+
+        <div class="button-list2">
+            <a class="btn-active">内容管理系统</a>
+            <a>协同设计系统</a>
+            <a>项目文档系统</a>
+            <a>知识管理体系</a>
+            <a>信息安全体系</a>
+            <a>协同教学平台</a>
+        </div>
+
+        <div style="padding-bottom: 110px;" class="bg-color-5">
+            <div class="template-wrap">
+
+                <div class="template-card switch-tab-1">
+                    <div class="template-card-img template-card-img-1" ></div>
+                    <div class="template-card-article">
+                        <b>服务网络之 --上海</b>
+                        <p>
+                            是指一些在网络上运行的、面向服务的、基于分布式程序的软件模块，网络服务采用HTTP和XML（标准通用标记语言的子集）等互联网通用标准，使人们可以在不同的地方通过不同的终端设备访问WEB上的数据，如网上订票，查看订座情况。网络服务在电子商务、电子政务、公司业务流程电子化等应用领域有广泛的应用，被业内人士奉为互联网的下一个重点
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-1">
+                    <div class="template-card-img template-card-img-2"></div>
+                    <div class="template-card-article">
+                        <b>广州</b>
+                        <p>
+                            DHCP的全名是“Dynamic Host Configuration Protocol”，即动态主机配置协议。在使用DHCP的网络里，用户的计算机可以从DHCP服务器那里获得上网的参数，几乎不需要做任何手工的配置就可以上网。 一般情况下，DHCP服务器会尽量保持每台计算机使用同一个IP地址上网。如果计算机长时间没有上网或配置为使用静态地址上网，DHCP服务器就会把这个地址分配给其他计算机。
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-1">
+                    <div class="template-card-img template-card-img-3"></div>
+                    <div class="template-card-article">
+                        <b>深圳</b>
+                        <p>
+                            根据协议，双方将在旅游投资项目库、乡村旅游扶贫、旅游投融资平台、旅游企业创新发展、区域旅游资源整合、互联网旅游新业态等方面开展合作。中信银行将充分利用中信集团资源优势，积极支持国家旅游局重点发展领域和重点建设项目，为旅游企业和旅游者提供全方位、便捷优惠的金融服务，全力支持旅游业发展。国家旅游局将推荐中信银行作为其重点发展领域和重点建设项目的合作伙伴。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="template-card switch-tab-2 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展 -- 何为可持续发展</b>
+                        <p>
+                         中证网讯 可持续发展（英语：Sustainable Development，縮寫：SD），或永續發展，是指在保护环境的条件下既满足当代人的需求，又以不损害后代人的需求為前瞻的发展模式。“可持续发展”这个术语使用由布倫特蘭委員會创造已成为最经常被引用的可持续发展的定义：“既能满足我们现今的需求，又不损害子孙后代能满足他们的需求的发展模式。”
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-2 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展三要素</b>
+                        <p>
+                            環境要素（Environmental aspect）
+                            指尽量减少对环境的损害（Environmental Impact）。尽管这一原则得到各方人士的认可，但是由于目前人类科学知识的局限性，对于许多具体问题就会产生截然相反的认识，例如核电站，支持人士认为它可以减少温室气体排放，是环保的，反对人士认为核废料有长期放射性污染，同时核电站存在安全隐患是不环保的。
+                            社会要素（Social aspect）
+                            经济要素（Economic aspect）
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-2 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展的公司</b>
+                        <p>
+                            不僅實現代際公正，更要實現代內公正，即當代一部份人的發展不應損害另一部份人的利益。
+                            經濟與社會的發展要符合地球生態系統的動態平衡的法則和資源可持續利用的原則。
+                            改變不合理的资源消耗式的消費模式。
+                            解決全球的貧窮問題，窮人的生活質量有所提高。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="template-card switch-tab-3 hide">
+                    <div class="template-card-img template-card-img-1" ></div>
+                    <div class="template-card-article">
+                        <b>服务网络之 --上海</b>
+                        <p>
+                            是指一些在网络上运行的、面向服务的、基于分布式程序的软件模块，网络服务采用HTTP和XML（标准通用标记语言的子集）等互联网通用标准，使人们可以在不同的地方通过不同的终端设备访问WEB上的数据，如网上订票，查看订座情况。网络服务在电子商务、电子政务、公司业务流程电子化等应用领域有广泛的应用，被业内人士奉为互联网的下一个重点
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-3 hide">
+                    <div class="template-card-img template-card-img-2"></div>
+                    <div class="template-card-article">
+                        <b>广州</b>
+                        <p>
+                            DHCP的全名是“Dynamic Host Configuration Protocol”，即动态主机配置协议。在使用DHCP的网络里，用户的计算机可以从DHCP服务器那里获得上网的参数，几乎不需要做任何手工的配置就可以上网。 一般情况下，DHCP服务器会尽量保持每台计算机使用同一个IP地址上网。如果计算机长时间没有上网或配置为使用静态地址上网，DHCP服务器就会把这个地址分配给其他计算机。
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-3 hide">
+                    <div class="template-card-img template-card-img-3"></div>
+                    <div class="template-card-article">
+                        <b>深圳</b>
+                        <p>
+                            根据协议，双方将在旅游投资项目库、乡村旅游扶贫、旅游投融资平台、旅游企业创新发展、区域旅游资源整合、互联网旅游新业态等方面开展合作。中信银行将充分利用中信集团资源优势，积极支持国家旅游局重点发展领域和重点建设项目，为旅游企业和旅游者提供全方位、便捷优惠的金融服务，全力支持旅游业发展。国家旅游局将推荐中信银行作为其重点发展领域和重点建设项目的合作伙伴。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="template-card switch-tab-4 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展 -- 何为可持续发展</b>
+                        <p>
+                         中证网讯 可持续发展（英语：Sustainable Development，縮寫：SD），或永續發展，是指在保护环境的条件下既满足当代人的需求，又以不损害后代人的需求為前瞻的发展模式。“可持续发展”这个术语使用由布倫特蘭委員會创造已成为最经常被引用的可持续发展的定义：“既能满足我们现今的需求，又不损害子孙后代能满足他们的需求的发展模式。”
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-4 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展三要素</b>
+                        <p>
+                            環境要素（Environmental aspect）
+                            指尽量减少对环境的损害（Environmental Impact）。尽管这一原则得到各方人士的认可，但是由于目前人类科学知识的局限性，对于许多具体问题就会产生截然相反的认识，例如核电站，支持人士认为它可以减少温室气体排放，是环保的，反对人士认为核废料有长期放射性污染，同时核电站存在安全隐患是不环保的。
+                            社会要素（Social aspect）
+                            经济要素（Economic aspect）
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-4 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展的公司</b>
+                        <p>
+                            不僅實現代際公正，更要實現代內公正，即當代一部份人的發展不應損害另一部份人的利益。
+                            經濟與社會的發展要符合地球生態系統的動態平衡的法則和資源可持續利用的原則。
+                            改變不合理的资源消耗式的消費模式。
+                            解決全球的貧窮問題，窮人的生活質量有所提高。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="template-card switch-tab-5 hide">
+                    <div class="template-card-img template-card-img-1" ></div>
+                    <div class="template-card-article">
+                        <b>服务网络之 --上海</b>
+                        <p>
+                            是指一些在网络上运行的、面向服务的、基于分布式程序的软件模块，网络服务采用HTTP和XML（标准通用标记语言的子集）等互联网通用标准，使人们可以在不同的地方通过不同的终端设备访问WEB上的数据，如网上订票，查看订座情况。网络服务在电子商务、电子政务、公司业务流程电子化等应用领域有广泛的应用，被业内人士奉为互联网的下一个重点
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-5 hide">
+                    <div class="template-card-img template-card-img-2"></div>
+                    <div class="template-card-article">
+                        <b>广州</b>
+                        <p>
+                            DHCP的全名是“Dynamic Host Configuration Protocol”，即动态主机配置协议。在使用DHCP的网络里，用户的计算机可以从DHCP服务器那里获得上网的参数，几乎不需要做任何手工的配置就可以上网。 一般情况下，DHCP服务器会尽量保持每台计算机使用同一个IP地址上网。如果计算机长时间没有上网或配置为使用静态地址上网，DHCP服务器就会把这个地址分配给其他计算机。
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-5 hide">
+                    <div class="template-card-img template-card-img-3"></div>
+                    <div class="template-card-article">
+                        <b>深圳</b>
+                        <p>
+                            根据协议，双方将在旅游投资项目库、乡村旅游扶贫、旅游投融资平台、旅游企业创新发展、区域旅游资源整合、互联网旅游新业态等方面开展合作。中信银行将充分利用中信集团资源优势，积极支持国家旅游局重点发展领域和重点建设项目，为旅游企业和旅游者提供全方位、便捷优惠的金融服务，全力支持旅游业发展。国家旅游局将推荐中信银行作为其重点发展领域和重点建设项目的合作伙伴。
+                        </p>
+                    </div>
+                </div>
+
+                <div class="template-card switch-tab-6 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展 -- 何为可持续发展</b>
+                        <p>
+                         中证网讯 可持续发展（英语：Sustainable Development，縮寫：SD），或永續發展，是指在保护环境的条件下既满足当代人的需求，又以不损害后代人的需求為前瞻的发展模式。“可持续发展”这个术语使用由布倫特蘭委員會创造已成为最经常被引用的可持续发展的定义：“既能满足我们现今的需求，又不损害子孙后代能满足他们的需求的发展模式。”
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-6 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展三要素</b>
+                        <p>
+                            環境要素（Environmental aspect）
+                            指尽量减少对环境的损害（Environmental Impact）。尽管这一原则得到各方人士的认可，但是由于目前人类科学知识的局限性，对于许多具体问题就会产生截然相反的认识，例如核电站，支持人士认为它可以减少温室气体排放，是环保的，反对人士认为核废料有长期放射性污染，同时核电站存在安全隐患是不环保的。
+                            社会要素（Social aspect）
+                            经济要素（Economic aspect）
+                        </p>
+                    </div>
+                </div>
+                <div class="template-card switch-tab-6 hide">
+                    <div class="template-card-img template-card-img-4" src="./imgs/ceil-img-2.png"></div>
+                    <div class="template-card-article">
+                        <b>可持续发展的公司</b>
+                        <p>
+                            不僅實現代際公正，更要實現代內公正，即當代一部份人的發展不應損害另一部份人的利益。
+                            經濟與社會的發展要符合地球生態系統的動態平衡的法則和資源可持續利用的原則。
+                            改變不合理的资源消耗式的消費模式。
+                            解決全球的貧窮問題，窮人的生活質量有所提高。
+                        </p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+        <script src="./js/jquery-3.1.1.min.js"></script>
+        <script src="./js/main.js"></script>
+    </body>
+</html>
