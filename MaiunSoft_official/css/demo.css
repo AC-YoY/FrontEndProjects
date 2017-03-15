@@ -134,7 +134,7 @@ nav > img:hover {
     color: #1784db;
     cursor: pointer;
 }
-.link-mobile,.link-global {
+.link-mobile {
     text-align: center;
 }
 /* 这里开始是导航的内容 */

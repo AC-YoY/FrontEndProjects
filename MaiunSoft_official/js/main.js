@@ -26,6 +26,7 @@
     // menu bar starts
     var timer = null
     $(".pointer").hover(function() {
+        initMenus()
         // clearTimeout(timer)
         $(this).parent().find(".menu-mask").slideDown(200)
     }, function() {
@@ -40,26 +41,37 @@
     }, function() {
         $(this).slideUp(100)
 
-        // 关闭菜单内容
-        $(".menu-ul > ul").hide()
-        $(".menu-div > div").hide()
-        $(".menu-about > div").hide()
-        $(".menu-content > div").hide()
-        $(".nav-4-empty-block").hide()
+        // // 关闭菜单内容
+        // $(".menu-ul > ul").hide()
+        // $(".menu-div > div").hide()
+        // $(".menu-about > div").hide()
+        // $(".menu-content > div").hide()
+        // $(".nav-4-empty-block").hide()
     })
 
+    var initMenus = function() {
+        $(".menu-ul > ul").hide()
+        $(".menu-content > div").hide()
+        $(".menu-div > div").hide()
+        $(".menu-about > div").hide()
+
+        $(".menu-left > ul > li:first-child").addClass("hover-back-color").css("color", "white").siblings().removeClass("hover-back-color").css("color", "#cbd0d4")
+        $(".menu-ul > ul:first-child").show()
+        $(".menu-content > div:first-child").show()
+        $(".nav-4-empty-block").show()
+        $(".menu-div > div:first-child").show()
+        $(".menu-about > div:first-child").show()
+    }
 
     // menu-left 也就是二级菜单的切换
     $(".menu-left li").hover(function() {
         $(this).siblings().removeClass("hover-back-color").css("color", "#cbd0d4")
-        // $(this).siblings().css("color", "#c4c4c4")
         // 因为二级菜单有三种式样，所以必须保证他们都被正确关闭了
         $(".menu-ul > ul").hide()
         $(".menu-div > div").hide()
         $(".menu-about > div").hide()
 
-        $(this).css("color", "white")
-        $(this).addClass("hover-back-color")
+        $(this).addClass("hover-back-color").css("color", "white")
         var index = $(this).index()
         // 注意，被打开的是 menu-num 类型的class 标签
         var className = ".menu-" + index
@@ -124,16 +136,9 @@
     // 这里是一些特殊效果
     $(".section-two-article").hover(function() {
         $(this).find("button").css("border-color", "#1784db")
-
-        // $(this).find("button").css("box-shadow", "none")
-        // $(this).find("button").css("box-shadow", "0px 0px 10px #1784db")
         $(this).find("button").css("color", "#1784db")
-
     }, function() {
         $(this).find("button").css("border-color", "white")
-
-        // $(this).find("button").css("box-shadow", "0px 0px 10px #1784db")
-        // $(this).find("button").css("box-shadow", "none")
         $(this).find("button").css("color", "black")
     })
 
@@ -180,12 +185,13 @@
         $(this).find(".upblock-bg-cg").stop().slideUp(100)
     })
 
-    // jquery插件，实现根据不同参数 来调用不同的选项卡
+    // 不同的链接保存不同的tab序号。来调用不同的选项卡
 
     $(".menu-ul li").click(function() {
         var tabIndex = $(this).index()
         var pageIndex = $(this).parent().index()
         var href =  $(this).data("href")
+        log(href)
         if(href.slice(1, 8) === "service") {
             if(pageIndex == 0) {
                 localStorage["service-consult"] = tabIndex
@@ -196,14 +202,14 @@
             }else if(pageIndex == 3) {
                 localStorage["service-train"] = tabIndex
             }
-            location.replace(href)
+            location = "." + href
         }else if(href.slice(1, 7) === "employ") {
             if(pageIndex == 0) {
                 localStorage["employ-school"] = tabIndex
             }else if(pageIndex == 1) {
                 localStorage["employ-social"] = tabIndex
             }
-            location.replace(href)
+            location = "." + href
         }
     })
 
