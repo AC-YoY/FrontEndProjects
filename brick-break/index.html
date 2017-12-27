@@ -39,6 +39,21 @@ function Paddle () {
     return p
 }
 
+function Ball () {
+    const img = imageFromPath( 'ball.png' )
+    const p = {
+        image: img,
+        x: 20,
+        y: 220,
+        speed: 15,
+    }
+    p.move = function ( x, y ) {
+
+    }
+
+    return p
+}
+
 
 function Game () {
     const canvas = document.getElementById( 'id-canvas' )
@@ -64,8 +79,9 @@ function Game () {
     g.registerAction = function ( key, callback ) {
         g.actions[ key ] = callback
     }
-
-
+    g.drawImage = function ( paddle ) {
+        g.context.drawImage( paddle.image, paddle.x, paddle.y, paddle.image.width, paddle.image.height )
+    }
     setInterval( function () {
         // register events
         const actions = Object.keys( g.actions )
@@ -77,7 +93,7 @@ function Game () {
         }
 
         // clear
-        g.clear()
+        g.context.clearRect( 0, 0, g.canvas.width, g.canvas.height )
         // draw
         g.draw()
     }, 1000 / 30 )
@@ -89,20 +105,15 @@ const __main = function () {
 
     const paddle = Paddle()
     const game = Game()
+    const ball = Ball()
 
     game.registerAction( 'a', paddle.moveLeft )
     game.registerAction( 'd', paddle.moveRight )
 
-
-    game.clear = function () {
-        game.context.clearRect( 0, 0, game.canvas.width, game.canvas.height )
-    }
     game.draw = function () {
-        game.context.drawImage( paddle.image, paddle.x, paddle.y, paddle.image.width, paddle.image.height )
+        game.drawImage( paddle )
+        game.drawImage( ball )
     }
-
-
-
 
 }
 
