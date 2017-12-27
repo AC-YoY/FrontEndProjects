@@ -45,15 +45,28 @@ function Ball () {
         image: img,
         x: 20,
         y: 220,
-        speed: 15,
+        speedX: 15,
+        speedY: 15,
+        fired: false,
     }
-    p.move = function ( x, y ) {
-
+    p.fire = function () {
+        p.fired = true
+        console.log( 'p',p.fired )
+    }
+    p.move = function () {
+        if ( p.fired ) {
+            if ( p.x < 0 || p.x > 600) {
+                p.speedX *= -1
+            } else if ( p.y < 0 || p.y > 400 ) {
+                p.speedY *= -1
+            }
+            p.x += p.speedX
+            p.y += p.speedY
+        }
     }
 
     return p
 }
-
 
 function Game () {
     const canvas = document.getElementById( 'id-canvas' )
@@ -109,9 +122,11 @@ const __main = function () {
 
     game.registerAction( 'a', paddle.moveLeft )
     game.registerAction( 'd', paddle.moveRight )
+    game.registerAction( 'f', ball.fire )
 
     game.draw = function () {
         game.drawImage( paddle )
+        ball.move()
         game.drawImage( ball )
     }
 
