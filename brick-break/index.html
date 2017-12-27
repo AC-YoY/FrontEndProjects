@@ -6,6 +6,7 @@
     <style>
         #id-canvas {
             border: 1px solid black;
+            background-color: #eee;
         }
     </style>
 </head>
@@ -13,50 +14,100 @@
     <canvas id="id-canvas" width="600" height="400"></canvas>
 
 <script>
+
+function imageFromPath ( path ) {
+    const img = new Image()
+    img.src = path
+    return img
+}
+
+function Paddle () {
+    const img = imageFromPath( 'paddle.png' )
+    const p = {
+        image: img,
+        x: 0,
+        y: 280,
+        speed: 10,
+    }
+    p.moveLeft = function () {
+        p.x -= p.speed
+    }
+    p.moveRight = function () {
+        p.x += p.speed
+    }
+
+    return p
+}
+
+
+function Game () {
     const canvas = document.getElementById( 'id-canvas' )
     const ctx = canvas.getContext( '2d' )
 
-    let x = 0
-    let y = 280
-    let speed = 1
-    let moveLeft = false
-    let moveRight = false
-
-    const img = new Image()
-    img.onload = function() {
-        ctx.drawImage( img, x, y, img.width, img.height )
+    const g = {
+        canvas: canvas,
+        context: ctx,
+        actions: {},
+        keydowns: {}        //  这就是注册的写法
     }
-    img.src = 'paddle.png'
 
+    // events
     window.addEventListener( 'keydown', function ( event ) {
-        console.log( 'key', event.key )
         const key = event.key
-        if ( key === 'a' ) {
-            moveLeft = true
-        } else if ( key === 'd' ) {
-            moveRight = true
-        }
+        g.keydowns[ key ] = true
     } )
     window.addEventListener( 'keyup', function( event ) {
         const key = event.key
-        if ( key === 'a' ) {
-            moveLeft = false
-        } else if ( key === 'd' ) {
-            moveRight = false
-        }
+        g.keydowns[ key ] = false
     } )
 
-    setInterval( () => {
-        if ( moveLeft ) {
-            x -= speed
-        } else if ( moveRight ) {
-            x += speed
+    g.registerAction = function ( key, callback ) {
+        g.actions[ key ] = callback
+    }
+
+
+    setInterval( function () {
+        // register events
+        const actions = Object.keys( g.actions )
+        for ( let i = 0; i < actions.length; i++ ) {
+            const key = actions[ i ]
+            if ( g.keydowns[ key ] ) {
+                g.actions[ key ]()
+            }
         }
-        if ( moveLeft || moveRight ) {
-            ctx.clearRect( 0, 0, 600, 400 )
-            ctx.drawImage( img, x, y, img.width, img.height )
-        }
+
+        // clear
+        g.clear()
+        // draw
+        g.draw()
     }, 1000 / 30 )
+
+    return g
+}
+
+const __main = function () {
+
+    const paddle = Paddle()
+    const game = Game()
+
+    game.registerAction( 'a', paddle.moveLeft )
+    game.registerAction( 'd', paddle.moveRight )
+
+
+    game.clear = function () {
+        game.context.clearRect( 0, 0, game.canvas.width, game.canvas.height )
+    }
+    game.draw = function () {
+        game.context.drawImage( paddle.image, paddle.x, paddle.y, paddle.image.width, paddle.image.height )
+    }
+
+
+
+
+}
+
+__main()
+
 </script>
 </body>
 </html>
