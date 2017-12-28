@@ -49,8 +49,8 @@ function Ball () {
         speedY: 15,
         fired: false,
     }
-    p.fire = function () {
-        p.fired = true
+    p.toggleFire = function () {
+        p.fired = !p.fired
         console.log( 'p',p.fired )
     }
     p.move = function () {
@@ -122,7 +122,7 @@ const __main = function () {
 
     game.registerAction( 'a', paddle.moveLeft )
     game.registerAction( 'd', paddle.moveRight )
-    game.registerAction( 'f', ball.fire )
+    game.registerAction( 'f', ball.toggleFire )
 
     game.draw = function () {
         game.drawImage( paddle )
