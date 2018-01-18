@@ -12,7 +12,6 @@
 </head>
 <body>
     <canvas id="id-canvas" width="600" height="400"></canvas>
-
 <script>
 
 function imageFromPath ( path ) {
@@ -30,11 +29,16 @@ function Paddle () {
         speed: 10,
     }
     p.moveLeft = function () {
-        p.x -= p.speed
+        if ( p.x - p.speed >= 0 ) {
+            p.x -= p.speed
+        }
     }
     p.moveRight = function () {
-        p.x += p.speed
+        if ( p.x + p.speed <= 600 - p.image.width ) {
+            p.x += p.speed
+        }
     }
+
 
     return p
 }
