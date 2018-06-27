@@ -4,9 +4,18 @@
 * 
 * */
 
-var log = console.log.bind(console)
-
 var e = ele => document.querySelector(ele)
+// var log = console.log.bind(console)
+
+var log = function () {
+    let tmp = ''
+    for (var i = 0; i < arguments.length; i++) {
+        var t = arguments[i]
+        tmp += t
+    }
+    t += '\r\n'
+    e('#id-log').value += t
+}
 
 function imageFromPath (path) {
     var img = new Image()

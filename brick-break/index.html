@@ -5,13 +5,20 @@
     <title>打砖块</title>
     <style>
         #canvas {
+            display: block;
             border: 1px solid black;
         }
+        #id-range {
+            display: block;
+            width: 400px;
+        }
+
     </style>
 </head>
 <body>
 <canvas id="canvas" width="400" height="300"></canvas>
 <input id="id-range" type="range" value="1">
+<textarea id="id-log" cols="60" rows="15"></textarea>
 
 <script src="ball.js"></script>
 <script src="block.js"></script>

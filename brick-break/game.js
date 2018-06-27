@@ -4,7 +4,7 @@
 * 
 * */
 
-var Game = function () {
+var Game = function (loads) {
     var g = {
         keys: {},   // key: boolean
         events: {}, // key: callback
@@ -56,9 +56,24 @@ var Game = function () {
         }, 1000/fps)
     }
 
-    setTimeout(function () {
-        runLoop()
-    }, 1000/fps)
+    var flag = []
+    for (var i = 0; i < loads.length; i++) {
+        var p = loads[i]
+        var img = new Image()
+        img.src = p
+        img.onload = function () {
+            flag.push(1)
+            if (flag.length === loads.length) {
+                g.run()
+            }
+        }
+    }
+
+    g.run = function () {
+        setTimeout(function () {
+            runLoop()
+        }, 1000/fps)
+    }
 
     return g
 }

@@ -15,12 +15,12 @@ var Block = function (position) {
         w: 50,
         h: 20,
         alive: true,
-        lifes: p[2] || 1
+        lives: p[2] || 1
     }
     o.kill = function () {
         log('kill')
-        o.lifes--
-        if (o.lifes === 0) {
+        o.lives--
+        if (o.lives === 0) {
             o.alive = false
         }
     }
